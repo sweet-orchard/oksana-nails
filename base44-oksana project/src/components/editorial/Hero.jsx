@@ -10,26 +10,26 @@ export default function Hero() {
           <span>BIAB &amp; natural nail aesthetics</span>
           <span className="whitespace-nowrap">Bristol · 2026</span>
         </div>
-        <div className="relative my-6 flex-1 min-h-[440px]">
-          <div className="absolute left-0 top-3 h-[58%] w-[53%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
+        <div className="relative my-2 flex-1 min-h-[350px] sm:min-h-[390px]">
+          <div className="absolute left-0 top-1 h-[60%] w-[53%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
             <Image src="/images/hero-portrait.png" alt="Editorial portrait of Oksana" className="h-full w-full editorial-photo" />
           </div>
-          <div className="absolute right-0 top-3 z-10 text-right pr-1">
+          <div className="absolute right-0 top-1 z-10 text-right pr-1">
             <h1 className="font-serif text-[48px] sm:text-[54px] leading-none tracking-[-0.03em] text-[#F9F7F2] select-none drop-shadow-md">
               Oksana<span className="text-[#9EA28B]">.</span>
             </h1>
           </div>
-          <div className="absolute right-0 top-[24%] h-[48%] w-[44%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
+          <div className="absolute right-0 top-[22%] h-[50%] w-[44%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
             <Image src="/images/hero-detail.png" alt="Sculpted manicure detail" className="h-full w-full editorial-photo" />
           </div>
-          <p className="absolute bottom-6 left-[4%] max-w-[210px] font-serif text-lg italic leading-snug text-[#D6D0C5]">
+          <p className="absolute bottom-2 left-[4%] max-w-[210px] font-serif text-lg italic leading-snug text-[#D6D0C5]">
             Nails with precision, softness, and a little bit of shine.
           </p>
           <a href="#about" aria-label="Scroll down">
-            <ArrowDown className="absolute bottom-5 right-2 h-4 w-4 text-[#9EA28B] animate-bounce" />
+            <ArrowDown className="absolute bottom-1 right-2 h-4 w-4 text-[#9EA28B] animate-bounce" />
           </a>
         </div>
-        <div id="book" className="relative z-20 border border-[#555849] bg-[#303329] p-5 shadow-2xl">
+        <div id="book" className="relative z-20 -mt-1 border border-[#555849] bg-[#303329] p-5 shadow-2xl">
           <div className="mb-4 flex items-end justify-between">
             <div>
               <p className="mb-1 text-[8px] uppercase tracking-[0.34em] text-[#9EA28B]">Get in touch</p>
