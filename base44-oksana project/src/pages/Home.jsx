@@ -7,7 +7,7 @@ import Footer from '@/components/editorial/Footer';
 
 export default function Home() {
   return (
-    <main className="mx-auto min-h-screen w-full max-w-[480px] overflow-hidden bg-[#F9F7F2] shadow-[0_0_80px_rgba(0,0,0,0.35)]">
+    <main id="top" className="mx-auto min-h-screen w-full max-w-[480px] overflow-hidden bg-[#F9F7F2] shadow-[0_0_80px_rgba(0,0,0,0.35)]">
       <Hero /><About /><Specialties /><Reviews /><Footer />
     </main>
   );
