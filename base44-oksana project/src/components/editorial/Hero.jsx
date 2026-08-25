@@ -10,8 +10,8 @@ export default function Hero() {
           <span>BIAB &amp; natural nail aesthetics</span>
           <span className="whitespace-nowrap">Bristol · 2026</span>
         </div>
-        <div className="relative mt-4 mb-2 h-[290px]">
-          <div className="absolute left-0 top-0 h-[210px] w-[53%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
+        <div className="relative mt-4 mb-2 h-[355px]">
+          <div className="absolute left-0 top-0 h-[275px] w-[53%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
             <Image src="/images/hero-portrait.png" alt="Editorial portrait of Oksana" className="h-full w-full editorial-photo" />
           </div>
           <div className="absolute right-0 top-0 z-10 text-right pr-1">
@@ -19,14 +19,14 @@ export default function Hero() {
               Oksana<span className="text-[#9EA28B]">.</span>
             </h1>
           </div>
-          <div className="absolute right-0 top-[65px] h-[175px] w-[44%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
+          <div className="absolute right-0 top-[65px] h-[190px] w-[44%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
             <Image src="/images/hero-detail.png" alt="Sculpted manicure detail" className="h-full w-full editorial-photo" />
           </div>
-          <p className="absolute top-[225px] left-0 max-w-[210px] font-serif text-[17px] italic leading-snug text-[#D6D0C5]">
+          <p className="absolute top-[290px] left-0 max-w-[210px] font-serif text-[17px] italic leading-snug text-[#D6D0C5]">
             Nails with precision, softness, and a little bit of shine.
           </p>
           <a href="#about" aria-label="Scroll down">
-            <ArrowDown className="absolute top-[235px] right-2 h-4 w-4 text-[#9EA28B] animate-bounce" />
+            <ArrowDown className="absolute top-[300px] right-2 h-4 w-4 text-[#9EA28B] animate-bounce" />
           </a>
         </div>
         <div id="book" className="relative z-20 mt-3 border border-[#555849] bg-[#303329] p-5 shadow-2xl">
