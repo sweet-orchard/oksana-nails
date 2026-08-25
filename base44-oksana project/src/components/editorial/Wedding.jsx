@@ -12,9 +12,6 @@ export default function Wedding() {
         </div>
       </div>
       <div className="relative mt-9 h-[570px]">
-        <div className="absolute left-0 top-4 z-20 bg-[#4A4D3E] px-3.5 py-1.5 font-serif text-xs italic text-white shadow-xl">
-          For the bride
-        </div>
         <div className="absolute right-0 top-4 z-20 bg-[#34372D] px-3.5 py-1.5 text-white shadow-xl flex items-baseline gap-2">
           <span className="text-[8px] uppercase tracking-[0.22em] text-[#C5CBB7]">from</span>
           <span className="font-serif text-base font-medium tracking-tight">£95</span>
