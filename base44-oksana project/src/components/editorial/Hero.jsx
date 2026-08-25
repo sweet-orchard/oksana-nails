@@ -15,7 +15,7 @@ export default function Hero() {
             <Image src="/images/hero-portrait.png" alt="Editorial portrait of Oksana" className="h-full w-full editorial-photo" />
           </div>
           <div className="absolute right-0 top-0 z-10 text-right pr-1">
-            <h1 className="font-serif text-[48px] sm:text-[54px] leading-none tracking-[-0.03em] text-[#F9F7F2] select-none drop-shadow-md">
+            <h1 className="font-serif text-[36px] sm:text-[46px] leading-none tracking-[-0.03em] text-[#F9F7F2] select-none drop-shadow-md">
               Oksana<span className="text-[#9EA28B]">.</span>
             </h1>
           </div>
