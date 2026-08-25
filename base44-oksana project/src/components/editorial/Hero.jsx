@@ -35,7 +35,7 @@ export default function Hero() {
             <h2 className="font-serif text-2xl text-[#F9F7F2]">Book a session</h2>
           </div>
           <div className="grid gap-2 sm:grid-cols-2">
-            <a href="https://wa.me/447472338158?text=Hi%20Oksana%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment" target="_blank" rel="noreferrer" className="booking-link bg-[#626A52] text-white hover:bg-[#525944] transition-colors">
+            <a href="https://wa.me/447472338158" target="_blank" rel="noreferrer" className="booking-link bg-[#626A52] text-white hover:bg-[#525944] transition-colors">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
             <a href="mailto:oksana.nails@gmail.com" className="booking-link border border-[#555849] text-[#F9F7F2] hover:bg-white/5 transition-colors">
