@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oksana | BIAB &amp; Natural Nail Aesthetics</title>
+    <meta name="description" content="BIAB &amp; natural nail aesthetics based in Bristol. Miniature works of art, natural nails, bridal beauty and creative direction.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
+
+    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200..700;1,200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#23251F',
+                        'brand-card': '#303329',
+                        'brand-olive': '#626A52',
+                        'brand-olive-dark': '#525944',
+                        'brand-olive-light': '#9EA28B',
+                        'brand-border': '#555849',
+                        'brand-cream': '#F9F7F2',
+                        'brand-taupe': '#E8E3DA',
+                        'brand-taupe-dark': '#A69D91',
+                        'brand-text': '#34372D',
+                        'brand-text-muted': '#56584D',
+                        'brand-text-light': '#C1BBAF'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Montserrat"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Editorial & Smooth Scroll Enhancements */
+        html {
+            scroll-behavior: smooth;
+            background-color: #171714;
+        }
+
+        body {
+            font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Image hover treatment */
+        .editorial-photo {
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+            filter: contrast(1.04) saturate(0.85);
+        }
+
+        .editorial-photo:hover {
+            transform: scale(1.03);
+            filter: contrast(1) saturate(1);
+        }
+
+        /* Booking CTA Button styling */
+        .booking-link {
+            display: flex;
+            min-height: 3rem;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            transition: all 0.3s ease;
+        }
+
+        .specialty-number {
+            pointer-events: none;
+            position: absolute;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 96px;
+            line-height: 1;
+            color: rgba(166, 157, 145, 0.18);
+            user-select: none;
+        }
+
+        .service-kicker {
+            margin-top: 0.5rem;
+            font-size: 9px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: #8B8377;
+        }
+
+        /* Hide scrollbars for aesthetic mobile container */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#171714] min-h-screen flex items-center justify-center p-0 md:py-6 selection:bg-[#626A52] selection:text-white">
+
+    <!-- Main Container (Mobile-first, Centered Editorial Magazine Layout) -->
+    <main class="w-full max-w-[480px] bg-[#F9F7F2] min-h-screen shadow-[0_0_80px_rgba(0,0,0,0.45)] relative overflow-hidden flex flex-col">
+
+        <!-- ========================================== -->
+        <!-- 1. HERO SECTION                            -->
+        <!-- ========================================== -->
+        <section class="relative min-h-[100svh] overflow-hidden bg-brand-dark px-5 pb-8 pt-5 text-brand-cream flex flex-col justify-between">
+            <div class="mx-auto flex w-full flex-col min-h-[calc(100svh-3.25rem)] justify-between">
+                
+                <!-- Top Brand Kicker -->
+                <div class="flex items-center justify-between text-[9px] uppercase tracking-[0.24em] text-brand-text-light pt-2 gap-2">
+                    <span>BIAB &amp; natural nail aesthetics</span>
+                    <span class="whitespace-nowrap">Bristol · 2026</span>
+                </div>
+
+                <!-- Hero Imagery & Typography Composition -->
+                <div class="relative my-6 flex-1 min-h-[440px]">
+                    
+                    <!-- Main Portrait Image (Left) -->
+                    <div class="absolute left-0 top-3 h-[58%] w-[53%] border border-brand-border p-1.5 shadow-xl bg-[#2b2d26]">
+                        <img 
+                            src="images/hero-portrait.png" 
+                            onerror="this.onerror=null; this.src='images/hero-portrait.jpg';"
+                            alt="Editorial portrait of Oksana" 
+                            class="h-full w-full editorial-photo" 
+                        />
+                    </div>
+
+                    <!-- Bold Editorial Signature Title (Top Right) -->
+                    <div class="absolute right-0 top-3 z-10 text-right pr-1">
+                        <h1 class="font-serif text-[48px] sm:text-[54px] leading-none tracking-[-0.03em] text-brand-cream select-none drop-shadow-md">
+                            Oksana<span class="text-brand-olive-light">.</span>
+                        </h1>
+                    </div>
+
+                    <!-- Detail Photo (Sculpted Manicure - Right) -->
+                    <div class="absolute right-0 top-[24%] h-[48%] w-[44%] border border-brand-border p-1.5 shadow-xl bg-[#2b2d26]">
+                        <img 
+                            src="images/hero-detail.png" 
+                            onerror="this.onerror=null; this.src='images/hero-detail.jpg';"
+                            alt="Sculpted manicure detail" 
+                            class="h-full w-full editorial-photo" 
+                        />
+                    </div>
+
+                    <!-- Editorial Tagline (Bottom Left) -->
+                    <p class="absolute bottom-6 left-[4%] max-w-[210px] font-serif text-lg italic leading-snug text-[#D6D0C5]">
+                        Nails with precision, softness, and a little bit of shine.
+                    </p>
+
+                    <!-- Scroll Down Arrow (Bottom Right) -->
+                    <a href="#about" aria-label="Scroll to about section" class="absolute bottom-5 right-2 text-brand-olive-light hover:text-brand-cream transition-colors">
+                        <i class="fa-solid fa-arrow-down animate-bounce text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Overlapping Booking Card -->
+                <div id="book" class="relative z-20 border border-brand-border bg-brand-card p-5 shadow-2xl transition-transform">
+                    <div class="mb-4 flex items-end justify-between">
+                        <div>
+                            <p class="mb-1 text-[8px] uppercase tracking-[0.34em] text-brand-olive-light font-medium">Get in touch</p>
+                            <h2 class="font-serif text-2xl text-brand-cream">Book a session</h2>
+                        </div>
+                        <span class="font-serif text-2xl italic text-[#747965]">01</span>
+                    </div>
+
+                    <!-- Booking Action Buttons -->
+                    <div class="grid gap-2.5 sm:grid-cols-2">
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="booking-link bg-brand-olive text-white hover:bg-brand-olive-dark">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:oksana.nails@gmail.com" class="booking-link border border-brand-border text-brand-cream hover:bg-white/5">
+                            <i class="fa-regular fa-envelope text-sm"></i>
+                            <span>Email Oksana</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 2. STUDIO ETHOS / ABOUT SECTION            -->
+        <!-- ========================================== -->
+        <section id="about" class="overflow-hidden bg-brand-taupe px-6 py-20">
+            <div class="mx-auto max-w-md">
+                
+                <!-- Section Label Component -->
+                <div class="flex items-center gap-4">
+                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">About me</span>
+                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
+                </div>
+
+                <!-- Studio Image & Overlapping Bio Box -->
+                <div class="relative mt-12 min-h-[510px]">
+                    
+                    <!-- Studio Portrait Image (Borderless) -->
+                    <div class="ml-auto h-[380px] w-[78%] shadow-md overflow-hidden">
+                        <img 
+                            src="images/about-studio.png" 
+                            onerror="this.onerror=null; this.src='images/about-studio.jpg';"
+                            alt="Oksana in her naturally lit studio" 
+                            class="h-full w-full editorial-photo" 
+                        />
+                    </div>
+
+                    <!-- Frosted Bio Card -->
+                    <div class="absolute left-0 top-[52%] w-[88%] border border-brand-taupe-dark/40 bg-brand-cream/95 p-7 shadow-[0_20px_50px_rgba(63,58,48,0.12)] backdrop-blur-sm">
+                        <p class="text-[9px] uppercase tracking-[0.28em] text-[#898175] font-medium">The artist</p>
+                        <h2 class="mt-2 font-serif text-[32px] leading-tight text-brand-text">
+                            Hi, I’m <em class="text-[#8B8377] font-serif">Oksana.</em>
+                        </h2>
+                        <p class="mt-4 text-[13px] font-light leading-6 text-brand-text-muted">
+                            Your Nail Technician, Influencer, and Artist. I'm passionate about transforming nails into mini works of art. I'm here to inspire, share tips, and connect with all of you who love the world of beauty and design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- What drives my passion -->
+                <div class="mt-20">
+                    <p class="text-[10px] font-medium uppercase tracking-[0.28em] text-[#898175] mb-12">What drives my passion</p>
+                    <div class="grid gap-14">
+                        <!-- Value 1 -->
+                        <article class="relative max-w-[300px]">
+                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">01</span>
+                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
+                                <h3 class="font-serif text-xl text-brand-text">Quality &amp; Precision</h3>
+                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
+                                    I believe in doing nails right. Using the best products and techniques ensures that your nails not only look stunning but stay strong and beautiful for as long as possible. Quality is key, and I always aim for perfection.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Value 2 -->
+                        <article class="relative max-w-[300px] ml-auto">
+                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">02</span>
+                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
+                                <h3 class="font-serif text-xl text-brand-text">Client Experience</h3>
+                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
+                                    My top priority is you. From your comfort in the chair to ensuring you love your nails. I'm here to make every visit an experience. I strive to create a welcoming, positive space where you can relax and feel your best.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Value 3 -->
+                        <article class="relative max-w-[300px] ml-6">
+                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">03</span>
+                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
+                                <h3 class="font-serif text-xl text-brand-text">Creativity &amp; Innovation</h3>
+                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
+                                    I'm all about pushing boundaries and experimenting with new designs. Every set of nails is a canvas, and I love bringing fresh, unique ideas to life, whether it's bold art, intricate details or classic elegance.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 3. CURATED SPECIALTIES SECTION             -->
+        <!-- ========================================== -->
+        <section id="work" class="overflow-hidden bg-brand-cream px-6 py-20 text-brand-text">
+            <div class="mx-auto max-w-md">
+                
+                <!-- Section Label (Right aligned) -->
+                <div class="flex items-center justify-end gap-4">
+                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
+                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">Services</span>
+                </div>
+
+                <div class="mt-16 space-y-24">
+
+                    <!-- Specialty 01: Clean Beauty -->
+                    <article class="relative pt-6">
+                        <span class="specialty-number right-0 -top-6">01</span>
+                        <div class="relative z-10">
+                            <div>
+                                <h3 class="font-serif text-3xl text-brand-text">Clean Beauty</h3>
+                                <p class="service-kicker">Natural nails · thoughtful care</p>
+                            </div>
+                        </div>
+
+                        <!-- 3-Photo Editorial Layout (Borderless Placeholders) -->
+                        <div class="relative mt-8 h-[500px]">
+                            <!-- Floating Price Ribbon -->
+                            <div class="absolute right-0 top-4 z-20 bg-[#4A4D3E] px-3.5 py-1.5 text-white shadow-xl flex items-baseline gap-2">
+                                <span class="text-[8px] uppercase tracking-[0.22em] text-[#C5CBB7]">from</span>
+                                <span class="font-serif text-base font-medium tracking-tight">£50</span>
+                                <span class="text-[8px] uppercase tracking-[0.16em] text-[#E0E5D7] border-l border-white/20 pl-2">90 min</span>
+                            </div>
+
+                            <!-- Top Wide Placeholder -->
+                            <div class="absolute left-0 top-0 h-[250px] w-[88%] shadow-md overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-3 text-center select-none">
+                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
+                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Floating Polish Still Life Placeholder -->
+                            <div class="absolute right-0 top-[210px] z-10 h-[185px] w-[48%] shadow-xl overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Left Botanical Photo Placeholder -->
+                            <div class="absolute bottom-0 left-[6%] h-[200px] w-[42%] shadow-lg overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <p class="absolute bottom-7 right-1 w-[42%] border-t border-brand-taupe-dark pt-3 text-[11px] leading-5 text-[#67675E]">
+                                Quiet finishes, considered prep and lasting natural health.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <!-- Specialty 02: Wedding Nails -->
+                    <article class="relative border-t border-brand-taupe-dark/30 pt-16">
+                        <span class="specialty-number right-0 top-8">02</span>
+                        <div class="relative z-10">
+                            <div>
+                                <h3 class="font-serif text-3xl text-brand-text">Wedding Nails</h3>
+                                <p class="service-kicker">Bridal · occasions</p>
+                            </div>
+                        </div>
+
+                        <!-- 3-Photo Bridal Layout (Borderless Placeholders) -->
+                        <div class="relative mt-8 h-[550px]">
+                            <!-- Floating Bridal Badge -->
+                            <div class="absolute left-0 top-4 z-20 bg-[#4A4D3E] px-3.5 py-1.5 font-serif text-xs italic text-white shadow-xl">
+                                For the bride
+                            </div>
+
+                            <!-- Floating Price Ribbon -->
+                            <div class="absolute right-0 top-4 z-20 bg-[#34372D] px-3.5 py-1.5 text-white shadow-xl flex items-baseline gap-2">
+                                <span class="text-[8px] uppercase tracking-[0.22em] text-[#C5CBB7]">from</span>
+                                <span class="font-serif text-base font-medium tracking-tight">£95</span>
+                                <span class="text-[8px] uppercase tracking-[0.16em] text-[#E0E5D7] border-l border-white/20 pl-2">bridal set</span>
+                            </div>
+
+                            <!-- Main Milky Manicure Placeholder -->
+                            <div class="absolute left-[12%] top-0 h-[380px] w-[64%] shadow-md overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-3 text-center select-none">
+                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
+                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Floating Detail Photo Placeholder -->
+                            <div class="absolute right-0 top-[295px] z-20 h-[160px] w-[45%] shadow-xl overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Left Still Life Photo Placeholder -->
+                            <div class="absolute bottom-0 left-0 h-[155px] w-[53%] shadow-lg overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Specialty 03: Editorial -->
+                    <article class="relative border-t border-brand-taupe-dark/30 pt-16">
+                        <span class="specialty-number right-0 top-8">03</span>
+                        <div class="relative z-10">
+                            <div>
+                                <h3 class="font-serif text-3xl uppercase tracking-[0.08em] text-brand-text">Editorial</h3>
+                                <p class="service-kicker">Shoots · models · brands</p>
+                            </div>
+                        </div>
+
+                        <!-- Dark Editorial Magazine Container (Borderless Placeholders) -->
+                        <div class="relative mt-8 h-[560px] bg-brand-dark p-4 shadow-2xl">
+                            <!-- Floating Price Ribbon -->
+                            <div class="absolute right-4 top-4 z-20 bg-[#F9F7F2] px-3.5 py-1.5 text-[#23251F] shadow-xl flex items-baseline gap-2">
+                                <span class="text-[8px] uppercase tracking-[0.22em] text-[#626A52]">from</span>
+                                <span class="font-serif text-base font-semibold tracking-tight">£140</span>
+                                <span class="text-[8px] uppercase tracking-[0.16em] text-[#555849] border-l border-black/15 pl-2">per project</span>
+                            </div>
+
+                            <!-- Tall Left Obsidian Photo Placeholder -->
+                            <div class="absolute left-4 top-4 h-[315px] w-[53%] shadow-lg overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-3 text-center select-none">
+                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
+                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Right Chrome Photo Placeholder -->
+                            <div class="absolute right-4 top-16 z-10 h-[185px] w-[42%] shadow-xl overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Hand Study Photo Placeholder -->
+                            <div class="absolute bottom-10 right-4 h-[225px] w-[70%] shadow-xl overflow-hidden">
+                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-2 text-center select-none">
+                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
+                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
+                                </div>
+                            </div>
+
+                            <p class="absolute bottom-3 left-4 text-[8px] uppercase tracking-[0.3em] text-brand-taupe-dark">
+                                Creative direction · 2026
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 4. KIND WORDS / REVIEWS SECTION            -->
+        <!-- ========================================== -->
+        <section class="bg-[#E8DED1] px-7 py-20 text-brand-text">
+            <div class="mx-auto max-w-md">
+                
+                <!-- Section Label -->
+                <div class="flex items-center gap-4">
+                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">Reviews</span>
+                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
+                </div>
+
+                <div class="mt-14">
+                    <!-- Client Review -->
+                    <blockquote class="border-l border-[#8D867A] pl-6">
+                        <p class="font-serif text-xl italic leading-relaxed text-brand-text">
+                            “Hey!!! Just wanted you to know that I have received so many compliments for the manicure you did for me! I absolutely love it and you are so so talented in recreating that design for me! Definitely recommending you to everyone I know xxx”
+                        </p>
+                        <footer class="mt-4 text-[9px] font-semibold uppercase tracking-[0.26em] text-[#80796F]">
+                            — Client Feedback
+                        </footer>
+                    </blockquote>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- 5. LUXURY MINIMALIST FOOTER                -->
+        <!-- ========================================== -->
+        <footer class="bg-brand-dark px-7 pb-12 pt-16 text-brand-cream">
+            <div class="mx-auto max-w-md">
+                
+                <p class="text-[9px] uppercase tracking-[0.3em] text-brand-olive-light font-medium">Ready when you are</p>
+                <h2 class="mt-4 font-serif text-[48px] sm:text-[60px] leading-[1.02] tracking-tight">
+                    Beautiful nails,<br><em class="italic text-brand-olive-light font-serif">made just for you.</em>
+                </h2>
+
+                <!-- Scroll to Top / Book CTA -->
+                <a href="#book" class="mt-10 flex min-h-12 items-center justify-between border-y border-brand-border py-4 text-xs font-medium uppercase tracking-[0.2em] hover:text-brand-olive-light transition-colors">
+                    <span>Book an appointment</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+
+                <!-- Copyright & Location -->
+                <div class="mt-14 flex justify-between text-[8px] uppercase tracking-[0.24em] text-[#777C69] border-t border-brand-border/40 pt-6">
+                    <span>© 2026 Oksana</span>
+                    <span>Bristol, UK</span>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
