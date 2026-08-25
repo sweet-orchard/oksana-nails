@@ -30,12 +30,9 @@ export default function Hero() {
           </a>
         </div>
         <div id="book" className="relative z-20 mt-3 border border-[#555849] bg-[#303329] p-5 shadow-2xl">
-          <div className="mb-4 flex items-end justify-between">
-            <div>
-              <p className="mb-1 text-[8px] uppercase tracking-[0.34em] text-[#9EA28B]">Get in touch</p>
-              <h2 className="font-serif text-2xl text-[#F9F7F2]">Book a session</h2>
-            </div>
-            <span className="font-serif text-2xl italic text-[#747965]">01</span>
+          <div className="mb-4">
+            <p className="mb-1 text-[8px] uppercase tracking-[0.34em] text-[#9EA28B]">Get in touch</p>
+            <h2 className="font-serif text-2xl text-[#F9F7F2]">Book a session</h2>
           </div>
           <div className="grid gap-2 sm:grid-cols-2">
             <a href="https://wa.me/447472338158?text=Hi%20Oksana%2C%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment" target="_blank" rel="noreferrer" className="booking-link bg-[#626A52] text-white hover:bg-[#525944] transition-colors">
