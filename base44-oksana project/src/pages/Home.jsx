@@ -56,7 +56,7 @@ export default function Home() {
               <Image
                 src="/images/hero-portrait.png"
                 alt="Oksana - Nail Technician"
-                className="w-full h-full object-cover object-top scale-105"
+                className="w-full h-full object-cover object-top scale-125 -translate-x-2.5"
               />
             </div>
           </div>
