@@ -54,7 +54,7 @@ export default function Home() {
           <div className="relative -mt-[70px] sm:-mt-[76px] z-10">
             <div className="w-[124px] h-[124px] sm:w-[148px] sm:h-[148px] rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-2xl bg-[#23271F]">
               <Image
-                src="/images/hero-portrait.png"
+                src="/images/portait for about me.jpeg"
                 alt="Oksana - Nail Technician"
                 className="w-full h-full object-cover object-top scale-105"
               />
