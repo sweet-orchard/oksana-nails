@@ -73,11 +73,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Framed Buttons Stack (Middle - Centered) */}
-        <div className="w-full px-6 sm:px-7 space-y-2 sm:space-y-3 my-auto flex-shrink-0">
+        {/* Framed Buttons Stack (Middle - Centered with Generous Padding) */}
+        <div className="w-full px-6 sm:px-7 space-y-3 sm:space-y-3.5 my-auto flex-shrink-0">
           <button
             onClick={() => setActiveModal('about')}
-            className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             About Me
           </button>
@@ -86,21 +86,21 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-2 w-full">
             <button
               onClick={() => setActiveModal('clean-beauty')}
-              className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Clean Beauty
             </button>
 
             <button
               onClick={() => setActiveModal('bridal')}
-              className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Bridal
             </button>
 
             <button
               onClick={() => setActiveModal('editorial')}
-              className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Editorial
             </button>
@@ -108,14 +108,14 @@ export default function Home() {
 
           <button
             onClick={() => setActiveModal('reviews')}
-            className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             The Experience
           </button>
 
           <button
             onClick={() => setActiveModal('book')}
-            className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             Enquiries
           </button>
