@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oksana | BIAB &amp; Natural Nail Aesthetics</title>
-    <meta name="description" content="BIAB &amp; natural nail aesthetics based in Bristol. Miniature works of art, natural nails, bridal beauty and creative direction.">
+    <title>Oksana | Nail Artist</title>
+    <meta name="description"
+        content="BIAB &amp; natural nail aesthetics based in Bristol. Miniature works of art, natural nails, bridal beauty and creative direction.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
 
-    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <!-- Google Fonts: Alex Brush (Signature Script), Italiana & Cormorant Garamond (Editorial Serif), Montserrat (Clean Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200..700;1,200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Italiana&family=Montserrat:ital,wght@0,200..700;1,200..700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,21 +29,23 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#23251F',
-                        'brand-card': '#303329',
-                        'brand-olive': '#626A52',
-                        'brand-olive-dark': '#525944',
-                        'brand-olive-light': '#9EA28B',
-                        'brand-border': '#555849',
-                        'brand-cream': '#F9F7F2',
-                        'brand-taupe': '#E8E3DA',
-                        'brand-taupe-dark': '#A69D91',
-                        'brand-text': '#34372D',
-                        'brand-text-muted': '#56584D',
-                        'brand-text-light': '#C1BBAF'
+                        'brand-dark': '#161814',
+                        'brand-card': '#23271F',
+                        'brand-olive': '#59634C',
+                        'brand-olive-dark': '#48523D',
+                        'brand-olive-light': '#9AA38E',
+                        'brand-border': '#2D3227',
+                        'brand-cream': '#F8F6F0',
+                        'brand-sand': '#ECE7DC',
+                        'brand-taupe': '#E2DED4',
+                        'brand-text': '#23271F',
+                        'brand-text-muted': '#575B50',
+                        'brand-text-light': '#868B7D'
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        signature: ['"Alex Brush"', '"Pinyon Script"', 'cursive'],
+                        editorial: ['"Italiana"', '"Cormorant Garamond"', 'serif'],
+                        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
                         sans: ['"Montserrat"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
                     }
                 }
@@ -47,10 +54,10 @@
     </script>
 
     <style>
-        /* Editorial & Smooth Scroll Enhancements */
+        /* Base typography & smooth feel */
         html {
             scroll-behavior: smooth;
-            background-color: #171714;
+            background-color: #161814;
         }
 
         body {
@@ -59,60 +66,89 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        .font-serif {
-            font-family: 'Playfair Display', Georgia, serif;
+        /* Subtle luxury warm linen/paper grain */
+        .paper-texture {
+            background-color: #F8F6F0;
+            background-image: radial-gradient(#d8d5ca 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
         }
 
-        /* Image hover treatment */
-        .editorial-photo {
-            object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-            filter: contrast(1.04) saturate(0.85);
-        }
-
-        .editorial-photo:hover {
-            transform: scale(1.03);
-            filter: contrast(1) saturate(1);
-        }
-
-        /* Booking CTA Button styling */
-        .booking-link {
+        /* Framed outline buttons matching reference */
+        .ref-button {
             display: flex;
-            min-height: 3rem;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
-            padding: 0.75rem 1rem;
+            width: 100%;
+            padding: 0.95rem 1.5rem;
+            border: 1px solid #2D3227;
+            background-color: rgba(248, 246, 240, 0.75);
+            backdrop-filter: blur(4px);
+            color: #23271F;
+            font-family: 'Montserrat', sans-serif;
             font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.16em;
-            transition: all 0.3s ease;
+            letter-spacing: 0.24em;
+            text-align: center;
+            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 1px 2px rgba(35, 39, 31, 0.04);
+            cursor: pointer;
         }
 
-        .specialty-number {
+        .ref-button:hover {
+            background-color: #23271F;
+            color: #F8F6F0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(35, 39, 31, 0.15);
+        }
+
+        .ref-button:active {
+            transform: translateY(0);
+        }
+
+        /* Round icon buttons */
+        .icon-circle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 1px solid #2D3227;
+            border-radius: 9999px;
+            color: #23271F;
+            transition: all 0.25s ease;
+            background: rgba(248, 246, 240, 0.65);
+        }
+
+        .icon-circle-btn:hover {
+            background-color: #23271F;
+            color: #F8F6F0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 39, 31, 0.18);
+        }
+
+        /* Modal backdrop transition */
+        .modal-drawer {
+            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-hidden {
+            opacity: 0;
             pointer-events: none;
-            position: absolute;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 96px;
-            line-height: 1;
-            color: rgba(166, 157, 145, 0.18);
-            user-select: none;
+            transform: translateY(100%);
         }
 
-        .service-kicker {
-            margin-top: 0.5rem;
-            font-size: 9px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.22em;
-            color: #8B8377;
+        .modal-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0%);
         }
 
-        /* Hide scrollbars for aesthetic mobile container */
+        /* Hide scrollbars */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
+
         .no-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -120,369 +156,796 @@
     </style>
 </head>
 
-<body class="bg-[#171714] min-h-screen flex items-center justify-center p-0 md:py-6 selection:bg-[#626A52] selection:text-white">
+<body
+    class="bg-[#161814] min-h-screen flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
 
-    <!-- Main Container (Mobile-first, Centered Editorial Magazine Layout) -->
-    <main id="top" class="w-full max-w-[480px] bg-[#F9F7F2] min-h-screen shadow-[0_0_80px_rgba(0,0,0,0.45)] relative overflow-hidden flex flex-col">
+    <!-- Main Card Container (Mobile-first, Fits 100vh, Centered Ref-Design Layout) -->
+    <main
+        class="w-full max-w-[440px] paper-texture min-h-[100dvh] sm:min-h-[780px] h-[100dvh] sm:h-auto shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border-0 sm:border sm:border-[#2D3227]/40 sm:rounded-lg">
 
-        <!-- ========================================== -->
-        <!-- 1. HERO SECTION                            -->
-        <!-- ========================================== -->
-        <section class="relative min-h-[100svh] overflow-hidden bg-brand-dark px-5 pb-8 pt-5 text-brand-cream flex flex-col justify-between">
-            <div class="mx-auto flex w-full flex-col min-h-[calc(100svh-3.25rem)] justify-between">
-                
-                <!-- Top Brand Kicker -->
-                <div class="flex items-center justify-between text-[9px] uppercase tracking-[0.24em] text-brand-text-light pt-2 gap-2">
-                    <span>BIAB &amp; natural nail aesthetics</span>
-                    <span class="whitespace-nowrap">Bristol · 2026</span>
+        <!-- Header & Profile Section -->
+        <div class="w-full flex flex-col items-center">
+
+            <!-- Top Banner Image with Brand Logo Overlay ON TOP of it -->
+            <div class="relative w-full h-[145px] sm:h-[185px] overflow-hidden bg-[#23271F] shrink-0">
+                <img src="images/hero-detail.jpeg" onerror="this.onerror=null; this.src='images/hero-detail.png';"
+                    alt="Oksana Nail Aesthetics Studio Flatlay"
+                    class="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95" />
+
+                <!-- Subtle warm vignette overlay for crisp contrast -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none">
                 </div>
 
-                <!-- Hero Imagery & Typography Composition -->
-                <div class="relative mt-4 mb-2 h-[355px]">
-                    
-                    <!-- Main Portrait Image (Left) -->
-                    <div class="absolute left-0 top-0 h-[275px] w-[53%] border border-brand-border p-1.5 shadow-xl bg-[#2b2d26]">
-                        <img 
-                            src="images/hero-portrait.png" 
-                            onerror="this.onerror=null; this.src='images/hero-portrait.jpg';"
-                            alt="Editorial portrait of Oksana" 
-                            class="h-full w-full editorial-photo" 
-                        />
-                    </div>
+                <!-- Brand Logo ON TOP of the image -->
+                <div
+                    class="absolute top-4 sm:top-5 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+                    <img src="images/logo-light.png" alt="OXINAILS"
+                        class="h-7 sm:h-8 w-auto max-w-[210px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]" />
+                </div>
+            </div>
 
-                    <!-- Bold Editorial Signature Title (Top Right) -->
-                    <div class="absolute right-0 top-0 z-10 text-right pr-1">
-                        <h1 class="font-serif text-[36px] sm:text-[46px] leading-none tracking-[-0.03em] text-brand-cream select-none drop-shadow-md">
-                            Oksana<span class="text-brand-olive-light">.</span>
-                        </h1>
-                    </div>
+            <!-- Overlapping Circular Profile Avatar -->
+            <div class="relative -mt-11 sm:-mt-14 z-10 shrink-0">
+                <div
+                    class="w-[88px] h-[88px] sm:w-[110px] sm:h-[110px] rounded-full overflow-hidden border-[4px] border-[#F8F6F0] shadow-lg bg-[#23271F]">
+                    <img src="images/hero-portrait.png"
+                        onerror="this.onerror=null; this.src='images/portait for about me.jpeg';"
+                        alt="Oksana - Nail Technician & Artist"
+                        class="w-full h-full object-cover object-top scale-105" />
+                </div>
+            </div>
 
-                    <!-- Detail Photo (Sculpted Manicure - Right) -->
-                    <div class="absolute right-0 top-[65px] h-[190px] w-[44%] border border-brand-border p-1.5 shadow-xl bg-[#2b2d26]">
-                        <img 
-                            src="images/hero-detail.png" 
-                            onerror="this.onerror=null; this.src='images/hero-detail.jpg';"
-                            alt="Sculpted manicure detail" 
-                            class="h-full w-full editorial-photo" 
-                        />
-                    </div>
+            <!-- Name & Subtitle (Signature script font matching reference) -->
+            <div class="text-center px-6 mt-1 sm:mt-2 shrink-0">
+                <h1
+                    class="font-signature text-[42px] sm:text-[54px] font-normal leading-none text-[#23271F] select-none tracking-normal">
+                    Oksana
+                </h1>
+                <p
+                    class="mt-1 text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
+                    NAIL ARTIST
+                </p>
+                <div class="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-2 sm:mt-2.5"></div>
+            </div>
 
-                    <!-- Editorial Tagline (Directly Below Portrait) -->
-                    <p class="absolute top-[290px] left-0 max-w-[210px] font-serif text-[17px] italic leading-snug text-[#D6D0C5]">
-                        Nails with precision, softness, and a little bit of shine.
+            <!-- Framed Buttons Stack (Matching Reference) -->
+            <div class="w-full px-6 sm:px-7 mt-3.5 sm:mt-5 space-y-2 sm:space-y-2.5">
+
+                <!-- 1. ABOUT ME -->
+                <button onclick="openModal('about-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                    <span>About Me</span>
+                </button>
+
+                <!-- 2. Three Inline Portfolio Buttons (Horizontal Row) -->
+                <div class="grid grid-cols-3 gap-2 w-full">
+                    <button onclick="openModal('clean-beauty-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
+                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Clean Beauty</span>
+                    </button>
+                    <button onclick="openModal('bridal-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
+                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Bridal</span>
+                    </button>
+                    <button onclick="openModal('editorial-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
+                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Editorial</span>
+                    </button>
+                </div>
+
+                <!-- 3. THE EXPERIENCE -->
+                <button onclick="openModal('reviews-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                    <span>The Experience</span>
+                </button>
+
+                <!-- 4. ENQUIRIES -->
+                <button onclick="openModal('book-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                    <span>Enquiries</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Footer / Contact Section (Matching Reference) -->
+        <div class="w-full px-6 sm:px-7 pt-3.5 sm:pt-6 pb-3.5 sm:pb-6 text-center shrink-0">
+
+            <div class="inline-block border-b border-[#2D3227]/30 pb-1 mb-2.5 sm:mb-3 px-3">
+                <p class="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-[0.26em] text-[#23271F] select-none">
+                    Contact Me
+                </p>
+            </div>
+
+            <!-- 2 Minimalist Icons: Email, WhatsApp -->
+            <div class="flex items-center justify-center gap-3.5 sm:gap-4">
+
+                <!-- Email Envelope (oxi.nails6@gmail.com) -->
+                <a href="mailto:oxi.nails6@gmail.com" title="Email Oksana" class="icon-circle-btn !w-9 !h-9 sm:!w-10 sm:!h-10 text-sm sm:text-base"
+                    aria-label="Send Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/447472338158" target="_blank" rel="noopener noreferrer" title="WhatsApp Oksana"
+                    class="icon-circle-btn !w-9 !h-9 sm:!w-10 sm:!h-10 text-sm sm:text-base" aria-label="WhatsApp / Chat">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+            <!-- Bristol & Copyright Info -->
+            <div class="mt-2 sm:mt-3 text-[7.5px] sm:text-[8px] uppercase tracking-[0.2em] text-[#868B7D]">
+                <span>Bristol, UK · © 2026 Oksana</span>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- MODAL: ABOUT ME                            -->
+        <!-- ========================================== -->
+        <div id="about-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'about-modal')">
+            <div
+                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+
+                <button onclick="closeModal('about-modal')"
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Clean Header -->
+                <div class="mb-4 pr-8">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-[#23271F]">Hi, I’m <span
+                            class="font-signature text-3xl sm:text-4xl text-[#59634C]">Oksana</span></h2>
+                </div>
+
+                <!-- Full Portrait Photo -->
+                <div onclick="openLightbox('images/portait for about me.jpeg', 'Oksana')"
+                    class="relative w-full overflow-hidden shadow-md border border-[#E2DED4] cursor-pointer group rounded-none mb-5">
+                    <img src="images/portait for about me.jpeg"
+                        onerror="this.onerror=null; this.src='images/hero-portrait.png';" alt="Oksana"
+                        class="w-full h-auto max-h-[460px] object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 rounded-none" />
+                </div>
+
+                <!-- Bio Text (Simple, Clean Unstyled Text) -->
+                <div class="space-y-3 text-[13.5px] text-[#2D3227] leading-relaxed">
+                    <p>
+                        I’m a freelance nail artist working independently across manicure, pedicure and creative
+                        projects.
                     </p>
+                    <p>
+                        My work moves between private clients, bridal and creative productions, with a particular
+                        appreciation for natural beauty, thoughtful details and a considered approach to each project.
+                    </p>
+                    <p>
+                        Based in Bristol, working on set with models.
+                    </p>
+                </div>
 
-                    <!-- Scroll Down Arrow (Right aligned with tagline) -->
-                    <a href="#about" aria-label="Scroll to about section" class="absolute top-[300px] right-2 text-brand-olive-light hover:text-brand-cream transition-colors">
-                        <i class="fa-solid fa-arrow-down animate-bounce text-sm"></i>
+                <!-- What Drives My Passion (Values) -->
+                <div class="mt-9 pt-7 border-t border-[#E2DED4]">
+                    <p class="text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#80796F] mb-9">What drives my
+                        passion</p>
+
+                    <div class="space-y-10">
+                        <!-- Value 01 -->
+                        <article class="relative">
+                            <span
+                                class="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">01</span>
+                            <div class="relative border-l border-[#8D867A]/60 pl-5">
+                                <h3 class="font-serif text-lg text-[#23271F]">Quality &amp; Precision</h3>
+                                <p class="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
+                                    I believe in doing nails right. Using the best products and techniques ensures that
+                                    your nails not only look stunning but stay strong and beautiful for as long as
+                                    possible. Quality is key, and I always aim for perfection.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Value 02 -->
+                        <article class="relative">
+                            <span
+                                class="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">02</span>
+                            <div class="relative border-l border-[#8D867A]/60 pl-5">
+                                <h3 class="font-serif text-lg text-[#23271F]">Client Experience</h3>
+                                <p class="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
+                                    My top priority is you. From your comfort in the chair to ensuring you love your
+                                    nails. I'm here to make every visit an experience. I strive to create a welcoming,
+                                    positive space where you can relax and feel your best.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Value 03 -->
+                        <article class="relative">
+                            <span
+                                class="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">03</span>
+                            <div class="relative border-l border-[#8D867A]/60 pl-5">
+                                <h3 class="font-serif text-lg text-[#23271F]">Creativity &amp; Innovation</h3>
+                                <p class="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
+                                    I'm all about pushing boundaries and experimenting with new designs. Every set of
+                                    nails is a canvas, and I love bringing fresh, unique ideas to life, whether it's
+                                    bold art, intricate details or classic elegance.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- MODAL: PORTFOLIO                           -->
+        <!-- ========================================== -->
+        <!-- ========================================== -->
+        <!-- MODAL 1: CLEAN BEAUTY & BIAB             -->
+        <!-- ========================================== -->
+        <div id="clean-beauty-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'clean-beauty-modal')">
+            <div
+                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+
+                <button onclick="closeModal('clean-beauty-modal')"
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Clean Beauty Section -->
+                <div class="bg-[#F8F6F0] px-5 sm:px-6 pt-6 sm:pt-7 pb-8">
+                    <div class="mb-3.5 pb-1 border-b border-[#E2DED4]">
+                        <h3 class="font-serif text-xl sm:text-2xl text-[#23271F]">Clean Beauty <span
+                                class="font-sans font-light text-lg text-[#59634C]">&amp;</span> BIAB</h3>
+                        <p class="text-xs text-[#575B50] font-light mt-0.5 tracking-wide">Natural nails. Thoughtful
+                            care. Aesthetic.</p>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <!-- Hero Spotlight 1 (Full Width) -->
+                        <div onclick="openLightbox('images/CLEAN BEAUTY/9.jpeg', 'Clean Beauty & BIAB — Editorial Spotlight')"
+                            class="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                            <img src="images/CLEAN BEAUTY/9.jpeg" alt="Clean Beauty 1"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+
+                        <!-- 2-Column Vertical Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/2.jpeg', 'Clean Beauty 2')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/2.jpeg" alt="Clean Beauty 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/3.jpeg', 'Clean Beauty 3')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/3.jpeg" alt="Clean Beauty 3"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- 3-Column Detail Trio -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/4.jpeg', 'Clean Beauty 4')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/4.jpeg" alt="Clean Beauty 4"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/5.jpeg', 'Clean Beauty 5')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/5.jpeg" alt="Clean Beauty 5"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/6.jpeg', 'Clean Beauty 6')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/6.jpeg" alt="Clean Beauty 6"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/7.jpeg', 'Clean Beauty 7')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/7.jpeg" alt="Clean Beauty 7"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/8.jpeg', 'Clean Beauty 8')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/8.jpeg" alt="Clean Beauty 8"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Wide Feature Card -->
+                        <div onclick="openLightbox('images/CLEAN BEAUTY/1.jpeg', 'Clean Beauty 9 — Natural Care Detail')"
+                            class="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                            <img src="images/CLEAN BEAUTY/1.jpeg" alt="Clean Beauty 9"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/10.jpeg', 'Clean Beauty 10')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/10.jpeg" alt="Clean Beauty 10"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/CLEAN BEAUTY/11.jpeg', 'Clean Beauty 11')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none">
+                                <img src="images/CLEAN BEAUTY/11.jpeg" alt="Clean Beauty 11"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- MODAL 2: BRIDAL & OCCASION                -->
+        <!-- ========================================== -->
+        <div id="bridal-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'bridal-modal')">
+            <div
+                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+
+                <button onclick="closeModal('bridal-modal')"
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Bridal Section -->
+                <div class="bg-[#E8DED1] px-5 sm:px-6 pt-6 sm:pt-7 pb-8">
+                    <div class="mb-3.5 pb-1 border-b border-[#D5C8B8]">
+                        <h3 class="font-serif text-xl sm:text-2xl text-[#23271F] tracking-wide">BRIDAL <span
+                                class="font-sans font-light text-lg text-[#59634C]">&amp;</span> OCCASION</h3>
+                        <p class="text-xs text-[#6B6357] font-light mt-0.5 tracking-wide">For the moments that matter.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <!-- 2-Column Vertical Editorial Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/1.jpeg', 'Bridal 1')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/1.jpeg" alt="Bridal 1"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/2.jpeg', 'Bridal 2')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/2.jpeg" alt="Bridal 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Wide Bridal Feature -->
+                        <div onclick="openLightbox('images/BRIDAL & OCCASION/3.jpeg', 'Bridal 3 — Wedding Day Aesthetics')"
+                            class="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                            <img src="images/BRIDAL & OCCASION/3.jpeg" alt="Bridal 3"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+
+                        <!-- 3-Column Detail Grid -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/4.jpeg', 'Bridal 4')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/4.jpeg" alt="Bridal 4"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/5.jpeg', 'Bridal 5')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/5.jpeg" alt="Bridal 5"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/6.jpeg', 'Bridal 6')"
+                                class="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/6.jpeg" alt="Bridal 6"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/7.jpeg', 'Bridal 7')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/7.jpeg" alt="Bridal 7"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/BRIDAL & OCCASION/8.jpeg', 'Bridal 8')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/BRIDAL & OCCASION/8.jpeg" alt="Bridal 8"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- MODAL 3: EDITORIAL & ON SET               -->
+        <!-- ========================================== -->
+        <div id="editorial-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'editorial-modal')">
+            <div
+                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+
+                <button onclick="closeModal('editorial-modal')"
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- On Set Section -->
+                <div class="bg-[#E8DED1] px-5 sm:px-6 pt-6 sm:pt-7 pb-8">
+                    <div class="mb-3.5 pb-1 border-b border-[#D5C8B8]">
+                        <h3 class="font-serif text-xl sm:text-2xl text-[#23271F] tracking-wide">ON SET</h3>
+                        <p class="text-xs text-[#6B6357] font-light mt-0.5 tracking-wide">For shoots, models <span
+                                class="font-sans font-light text-xs text-[#59634C]">&amp;</span> collaborations.</p>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <!-- Hero Editorial Statement -->
+                        <div onclick="openLightbox('images/ON SET/1.jpeg', 'On Set 1 — Creative Production Cover')"
+                            class="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                            <img src="images/ON SET/1.jpeg" alt="On Set 1"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/ON SET/2.jpeg', 'On Set 2')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/ON SET/2.jpeg" alt="On Set 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/ON SET/3.jpeg', 'On Set 3')"
+                                class="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/ON SET/3.jpeg" alt="On Set 3"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/ON SET/4.jpeg', 'On Set 4')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/ON SET/4.jpeg" alt="On Set 4"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/ON SET/5.jpeg', 'On Set 5')"
+                                class="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none">
+                                <img src="images/ON SET/5.jpeg" alt="On Set 5"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Behind the Scenes (Dark Green) -->
+                <div class="bg-[#232520] px-5 sm:px-6 py-8 text-[#F9F7F2]">
+                    <div class="space-y-2.5">
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/behind the schenes ON SET/1.jpeg', 'BTS 1')"
+                                class="aspect-[4/5] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/1.jpeg" alt="BTS 1"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/behind the schenes ON SET/2.jpeg', 'BTS 2')"
+                                class="aspect-[4/5] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/2.jpeg" alt="BTS 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Wide Feature Atmosphere -->
+                        <div onclick="openLightbox('images/behind the schenes ON SET/3.jpeg', 'BTS 3 — Studio Atmosphere')"
+                            class="w-full aspect-[16/10] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                            <img src="images/behind the schenes ON SET/3.jpeg" alt="BTS 3"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+
+                        <!-- 3-Column Micro Trio -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div onclick="openLightbox('images/behind the schenes ON SET/4.jpeg', 'BTS 4')"
+                                class="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/4.jpeg" alt="BTS 4"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/behind the schenes ON SET/5.jpeg', 'BTS 5')"
+                                class="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/5.jpeg" alt="BTS 5"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/behind the schenes ON SET/6.jpeg', 'BTS 6')"
+                                class="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/6.jpeg" alt="BTS 6"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- 2-Column Pair -->
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div onclick="openLightbox('images/behind the schenes ON SET/7.jpeg', 'BTS 7')"
+                                class="aspect-[3/4] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/7.jpeg" alt="BTS 7"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                            <div onclick="openLightbox('images/behind the schenes ON SET/8.jpeg', 'BTS 8')"
+                                class="aspect-[3/4] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                                <img src="images/behind the schenes ON SET/8.jpeg" alt="BTS 8"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Feature Close Frame -->
+                        <div onclick="openLightbox('images/behind the schenes ON SET/9.jpeg', 'BTS 9 — On Set Details')"
+                            class="w-full aspect-[16/10] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none">
+                            <img src="images/behind the schenes ON SET/9.jpeg" alt="BTS 9"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- MODAL: BOOK AN APPOINTMENT (White Background) -->
+        <!-- ========================================== -->
+        <div id="book-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'book-modal')">
+            <div
+                class="bg-[#F8F6F0] text-[#23271F] w-full max-w-[440px] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 shadow-2xl relative border border-[#2D3227]/20">
+
+                <button onclick="closeModal('book-modal')"
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#59634C]">Enquiries</span>
+                    <span class="h-px w-8 bg-[#59634C]/40"></span>
+                </div>
+
+                <h2 class="font-serif text-2xl text-[#23271F]">Get in Touch</h2>
+                <p class="text-xs text-[#575B50] mt-2 mb-6 font-light">
+                    For appointments, bridal enquiries, and creative projects.
+                </p>
+
+                <div class="space-y-3">
+                    <a href="https://wa.me/447472338158" target="_blank" rel="noopener noreferrer"
+                        class="ref-button bg-[#59634C] text-white border-[#59634C] hover:bg-[#48523D] flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Book via WhatsApp</span>
+                    </a>
+
+                    <a href="mailto:oxi.nails6@gmail.com" class="ref-button flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-envelope text-sm"></i>
+                        <span>Email: oxi.nails6@gmail.com</span>
                     </a>
                 </div>
 
-                <!-- Overlapping Booking Card (Positioned directly underneath) -->
-                <div id="book" class="relative z-20 mt-3 border border-brand-border bg-brand-card p-5 shadow-2xl transition-transform">
-                    <div class="mb-4">
-                        <p class="mb-1 text-[8px] uppercase tracking-[0.34em] text-brand-olive-light font-medium">Get in touch</p>
-                        <h2 class="font-serif text-2xl text-brand-cream">Book a session</h2>
-                    </div>
-
-                    <!-- Booking Action Buttons -->
-                    <div class="grid gap-2.5 sm:grid-cols-2">
-                        <a href="https://wa.me/447472338158" target="_blank" rel="noopener noreferrer" class="booking-link bg-brand-olive text-white hover:bg-brand-olive-dark">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>WhatsApp</span>
-                        </a>
-                        <a href="mailto:oxi.nails6@gmail.com" class="booking-link border border-brand-border text-brand-cream hover:bg-white/5">
-                            <i class="fa-regular fa-envelope text-sm"></i>
-                            <span>Email Oksana</span>
-                        </a>
-                    </div>
-                </div>
-
+                <p class="text-[9px] uppercase tracking-wider text-center text-[#868B7D] mt-5">
+                    Bristol, UK · Custom appointments &amp; bridal
+                </p>
             </div>
-        </section>
+        </div>
 
 
         <!-- ========================================== -->
-        <!-- 2. STUDIO ETHOS / ABOUT SECTION            -->
+        <!-- MODAL: REVIEWS (Warm Beige #E8DED1)        -->
         <!-- ========================================== -->
-        <section id="about" class="overflow-hidden bg-brand-taupe px-6 py-20">
-            <div class="mx-auto max-w-md">
-                
-                <!-- Section Label Component -->
-                <div class="flex items-center gap-4">
-                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">About me</span>
-                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
+        <div id="reviews-modal"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            onclick="handleBackdropClick(event, 'reviews-modal')">
+            <div
+                class="bg-[#E8DED1] text-[#34372D] w-full max-w-[440px] max-h-[85vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-8 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#8D867A]/30">
+
+                <button onclick="closeModal('reviews-modal')"
+                    class="absolute top-5 right-5 text-stone-600 hover:text-black p-1 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-[9.5px] font-medium uppercase tracking-[0.3em] text-[#605A51]">REVIEWS</span>
+                    <span class="h-px w-10 bg-[#8D867A]/50"></span>
                 </div>
 
-                <!-- Studio Image & Overlapping Bio Box -->
-                <div class="relative mt-12 min-h-[510px]">
-                    
-                    <!-- Studio Portrait Image (Borderless) -->
-                    <div class="ml-auto h-[380px] w-[78%] shadow-md overflow-hidden">
-                        <img 
-                            src="images/about-studio.png" 
-                            onerror="this.onerror=null; this.src='images/about-studio.jpg';"
-                            alt="Oksana in her naturally lit studio" 
-                            class="h-full w-full editorial-photo" 
-                        />
-                    </div>
-
-                    <!-- Frosted Bio Card -->
-                    <div class="absolute left-0 top-[52%] w-[88%] border border-brand-taupe-dark/40 bg-brand-cream/95 p-7 shadow-[0_20px_50px_rgba(63,58,48,0.12)] backdrop-blur-sm">
-                        <p class="text-[9px] uppercase tracking-[0.28em] text-[#898175] font-medium">The artist</p>
-                        <h2 class="mt-2 font-serif text-[32px] leading-tight text-brand-text">
-                            Hi, I’m <em class="text-[#8B8377] font-serif">Oksana.</em>
-                        </h2>
-                        <p class="mt-4 text-[13px] font-light leading-6 text-brand-text-muted">
-                            Your Nail Technician, Influencer, and Artist. I'm passionate about transforming nails into mini works of art. I'm here to inspire, share tips, and connect with all of you who love the world of beauty and design.
+                <div class="space-y-8">
+                    <!-- Review: Helen (Bridal 5-Star) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <div class="flex items-center gap-1.5 text-[#8C6239] mb-2 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “My wedding nails were perfect and you are so skilled at what you do xx”
                         </p>
-                    </div>
-                </div>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — Helen
+                        </footer>
+                    </blockquote>
 
-                <!-- What drives my passion -->
-                <div class="mt-20">
-                    <p class="text-[10px] font-medium uppercase tracking-[0.28em] text-[#898175] mb-12">What drives my passion</p>
-                    <div class="grid gap-14">
-                        <!-- Value 1 -->
-                        <article class="relative max-w-[340px]">
-                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">01</span>
-                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
-                                <h3 class="font-serif text-xl text-brand-text">Quality &amp; Precision</h3>
-                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
-                                    I believe in doing nails right. Using the best products and techniques ensures that your nails not only look stunning but stay strong and beautiful for as long as possible. Quality is key, and I always aim for perfection.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- Value 2 -->
-                        <article class="relative max-w-[340px]">
-                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">02</span>
-                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
-                                <h3 class="font-serif text-xl text-brand-text">Client Experience</h3>
-                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
-                                    My top priority is you. From your comfort in the chair to ensuring you love your nails. I'm here to make every visit an experience. I strive to create a welcoming, positive space where you can relax and feel your best.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- Value 3 -->
-                        <article class="relative max-w-[340px]">
-                            <span class="absolute -left-3 -top-12 font-serif text-[92px] leading-none text-brand-taupe-dark/20 select-none">03</span>
-                            <div class="relative border-l border-brand-taupe-dark/60 pl-5">
-                                <h3 class="font-serif text-xl text-brand-text">Creativity &amp; Innovation</h3>
-                                <p class="mt-2.5 text-[13px] font-light leading-6 text-brand-text-muted">
-                                    I'm all about pushing boundaries and experimenting with new designs. Every set of nails is a canvas, and I love bringing fresh, unique ideas to life, whether it's bold art, intricate details or classic elegance.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ========================================== -->
-        <!-- 3. CURATED SPECIALTIES SECTION             -->
-        <!-- ========================================== -->
-        <section id="work" class="overflow-hidden bg-brand-cream px-6 py-20 text-brand-text">
-            <div class="mx-auto max-w-md">
-                
-                <!-- Section Label (Right aligned) -->
-                <div class="flex items-center justify-end gap-4">
-                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
-                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">Services</span>
-                </div>
-
-                <div class="mt-16 space-y-24">
-
-                    <!-- Specialty 01: Clean Beauty -->
-                    <article class="relative pt-6">
-                        <span class="specialty-number right-0 -top-6">01</span>
-                        <div class="relative z-10">
-                            <div>
-                                <h3 class="font-serif text-3xl text-brand-text">Clean Beauty</h3>
-                                <p class="service-kicker">Natural nails · thoughtful care</p>
-                            </div>
-                        </div>
-
-                        <!-- 3-Photo Editorial Layout (Borderless Placeholders) -->
-                        <div class="relative mt-8 h-[500px]">
-
-                            <!-- Top Wide Placeholder -->
-                            <div class="absolute left-0 top-0 h-[250px] w-[88%] shadow-md overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-3 text-center select-none">
-                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
-                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Right Floating Polish Still Life Placeholder -->
-                            <div class="absolute right-0 top-[210px] z-10 h-[185px] w-[48%] shadow-xl overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Bottom Left Botanical Photo Placeholder -->
-                            <div class="absolute bottom-0 left-[6%] h-[200px] w-[42%] shadow-lg overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <p class="absolute bottom-7 right-1 w-[42%] border-t border-brand-taupe-dark pt-3 text-[11px] leading-5 text-[#67675E]">
-                                Quiet finishes, considered prep and lasting natural health.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- Specialty 02: Wedding Nails -->
-                    <article class="relative border-t border-brand-taupe-dark/30 pt-16">
-                        <span class="specialty-number right-0 top-8">02</span>
-                        <div class="relative z-10">
-                            <div>
-                                <h3 class="font-serif text-3xl text-brand-text">Wedding Nails</h3>
-                                <p class="service-kicker">Bridal · occasions</p>
-                            </div>
-                        </div>
-
-                        <!-- 3-Photo Bridal Layout (Borderless Placeholders) -->
-                        <div class="relative mt-8 h-[550px]">
-
-                            <!-- Main Milky Manicure Placeholder -->
-                            <div class="absolute left-[12%] top-0 h-[380px] w-[64%] shadow-md overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-3 text-center select-none">
-                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
-                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Right Floating Detail Photo Placeholder -->
-                            <div class="absolute right-0 top-[295px] z-20 h-[160px] w-[45%] shadow-xl overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Bottom Left Still Life Photo Placeholder -->
-                            <div class="absolute bottom-0 left-0 h-[155px] w-[53%] shadow-lg overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <!-- Specialty 03: Editorial -->
-                    <article class="relative border-t border-brand-taupe-dark/30 pt-16">
-                        <span class="specialty-number right-0 top-8">03</span>
-                        <div class="relative z-10">
-                            <div>
-                                <h3 class="font-serif text-3xl uppercase tracking-[0.08em] text-brand-text">Editorial</h3>
-                                <p class="service-kicker">Shoots · models · brands</p>
-                            </div>
-                        </div>
-
-                        <!-- Dark Editorial Magazine Container (Borderless Placeholders) -->
-                        <div class="relative mt-8 h-[560px] bg-brand-dark p-4 shadow-2xl">
-
-                            <!-- Tall Left Obsidian Photo Placeholder -->
-                            <div class="absolute left-4 top-4 h-[315px] w-[53%] shadow-lg overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-3 text-center select-none">
-                                    <i class="fa-regular fa-image text-2xl mb-1.5 opacity-60"></i>
-                                    <span class="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Right Chrome Photo Placeholder -->
-                            <div class="absolute right-4 top-16 z-10 h-[185px] w-[42%] shadow-xl overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <!-- Bottom Hand Study Photo Placeholder -->
-                            <div class="absolute bottom-10 right-4 h-[225px] w-[70%] shadow-xl overflow-hidden">
-                                <div class="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-2 text-center select-none">
-                                    <i class="fa-regular fa-image text-lg mb-1 opacity-60"></i>
-                                    <span class="text-[7px] uppercase tracking-[0.2em] font-medium opacity-80">Photo Placeholder</span>
-                                </div>
-                            </div>
-
-                            <p class="absolute bottom-3 left-4 text-[8px] uppercase tracking-[0.3em] text-brand-taupe-dark">
-                                Creative direction · 2026
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ========================================== -->
-        <!-- 4. KIND WORDS / REVIEWS SECTION            -->
-        <!-- ========================================== -->
-        <section class="bg-[#E8DED1] px-7 py-20 text-brand-text">
-            <div class="mx-auto max-w-md">
-                
-                <!-- Section Label -->
-                <div class="flex items-center gap-4">
-                    <span class="text-[10px] font-medium uppercase tracking-[0.32em] text-[#4A4D3E]">Reviews</span>
-                    <span class="h-px w-10 bg-[#4A4D3E]/40"></span>
-                </div>
-
-                <div class="mt-14">
-                    <!-- Client Review -->
-                    <blockquote class="border-l border-[#8D867A] pl-6">
-                        <p class="font-serif text-xl italic leading-relaxed text-brand-text">
+                    <!-- Review 1 (English) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
                             “Hey!!! Just wanted you to know that I have received so many compliments for the manicure you did for me! I absolutely love it and you are so so talented in recreating that design for me! Definitely recommending you to everyone I know xxx”
                         </p>
-                        <footer class="mt-4 text-[9px] font-semibold uppercase tracking-[0.26em] text-[#80796F]">
-                            — Client Feedback
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review: Sooo many compliments -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Sooo many compliments on these!! I loveeeee them!”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 2 (English) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Thank you so much for our nails 💅 you are truly talented- such an artist! 💗 we love them xx”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review: They are incredible -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “They are incredible! ❤️”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 3 (Ukrainian) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Дякую! Вони надзвичайні 😍😍😍 любуюся 🥰”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — @mariia_sugaring_bristol
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review: I love my nails -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “I love my nails. Thanks”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 4 (Russian/Ukrainian client) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Здравствуйте Оксана, хотела сказать что ногти просто супер, получила очень много комплиментов в поездке 😇❤️”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review: Thank you so much and I love my nails -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Thank you so much and I love my nails. Take care”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
+                        </footer>
+                    </blockquote>
+
+                    <!-- Review 5 (Ukrainian) -->
+                    <blockquote class="border-l-2 border-[#8D867A] pl-5">
+                        <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
+                            “Дякую дуже за ваші золоті руки й талант ❤️”
+                        </p>
+                        <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
+                            — CLIENT FEEDBACK
                         </footer>
                     </blockquote>
                 </div>
-
             </div>
-        </section>
-
+        </div>
 
         <!-- ========================================== -->
-        <!-- 5. LUXURY MINIMALIST FOOTER                -->
+        <!-- MODAL: IMAGE LIGHTBOX                      -->
         <!-- ========================================== -->
-        <footer class="bg-brand-dark px-7 pb-12 pt-16 text-brand-cream">
-            <div class="mx-auto max-w-md">
-                
-                <p class="text-[9px] uppercase tracking-[0.3em] text-brand-olive-light font-medium">Ready when you are</p>
-                <h2 class="mt-4 font-serif text-[48px] sm:text-[60px] leading-[1.02] tracking-tight">
-                    Beautiful nails,<br><em class="italic text-brand-olive-light font-serif">made just for you.</em>
-                </h2>
-
-                <!-- Scroll to Top / Book CTA -->
-                <a href="#top" class="mt-10 flex min-h-12 items-center justify-between border-y border-brand-border py-4 text-xs font-medium uppercase tracking-[0.2em] hover:text-brand-olive-light transition-colors">
-                    <span>Book an appointment</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-
-                <!-- Copyright & Location -->
-                <div class="mt-14 flex justify-between text-[8px] uppercase tracking-[0.24em] text-[#777C69] border-t border-brand-border/40 pt-6">
-                    <span>© 2026 Oksana</span>
-                    <span>Bristol, UK</span>
-                </div>
-
+        <div id="lightbox-modal"
+            class="fixed inset-0 z-[60] bg-black/90 backdrop-blur-md flex items-center justify-center modal-hidden transition-all duration-300 p-4"
+            onclick="handleBackdropClick(event, 'lightbox-modal')">
+            <div class="relative max-w-[92vw] max-h-[90vh] flex flex-col items-center"
+                onclick="event.stopPropagation()">
+                <button onclick="closeModal('lightbox-modal')"
+                    class="absolute -top-10 right-0 sm:-right-8 text-white/80 hover:text-white p-2 text-2xl"
+                    aria-label="Close preview">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <img id="lightbox-img" src="" alt="Full view preview"
+                    class="max-w-full max-h-[82vh] object-contain rounded-none shadow-2xl border border-white/10" />
+                <p id="lightbox-caption"
+                    class="text-[11px] tracking-widest text-[#E2DED4] uppercase mt-3 font-light text-center"></p>
             </div>
-        </footer>
+        </div>
 
     </main>
 
+    <!-- Interactive Script -->
+    <script>
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('modal-hidden');
+                modal.classList.add('modal-visible');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function openCategoryModal(categoryId) {
+            openModal('portfolio-modal');
+            setTimeout(() => {
+                const el = document.getElementById('cat-' + categoryId);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 120);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('modal-visible');
+                modal.classList.add('modal-hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleBackdropClick(event, id) {
+            if (event.target.id === id) {
+                closeModal(id);
+            }
+        }
+
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            if (modal && img) {
+                img.src = src;
+                if (cap) cap.textContent = caption || '';
+                modal.classList.remove('modal-hidden');
+                modal.classList.add('modal-visible');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                ['about-modal', 'clean-beauty-modal', 'bridal-modal', 'editorial-modal', 'book-modal', 'reviews-modal', 'lightbox-modal'].forEach(closeModal);
+            }
+        });
+    </script>
+
 </body>
+
 </html>

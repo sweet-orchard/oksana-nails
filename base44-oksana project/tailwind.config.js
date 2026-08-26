@@ -63,6 +63,8 @@ module.exports = {
   			}
   		},
   		fontFamily: {
+  			signature: ['"Alex Brush"', '"Pinyon Script"', 'cursive'],
+  			editorial: ['"Italiana"', '"Cormorant Garamond"', 'serif'],
   			heading: ['var(--font-heading)'],
   			body: ['var(--font-body)'],
   			display: ['var(--font-display)'],
