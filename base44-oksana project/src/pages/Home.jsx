@@ -50,9 +50,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Circular Overlapping Avatar (Bigger & Prominent) */}
-          <div className="relative -mt-13 sm:-mt-18 z-10">
-            <div className="w-[105px] h-[105px] sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
+          {/* Circular Overlapping Avatar (Significantly Bigger) */}
+          <div className="relative -mt-15 sm:-mt-19 z-10">
+            <div className="w-[124px] h-[124px] sm:w-[148px] sm:h-[148px] rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-2xl bg-[#23271F]">
               <Image
                 src="/images/hero-portrait.png"
                 alt="Oksana - Nail Technician"
@@ -61,23 +61,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Name & Title (Signature script font matching reference - Bigger & Prominent) */}
-          <div className="text-center px-6 mt-1.5 sm:mt-2.5">
-            <h1 className="font-signature text-[50px] sm:text-[58px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
+          {/* Name & Title (Much Bigger & Impactful) */}
+          <div className="text-center px-6 mt-1 sm:mt-2.5">
+            <h1 className="font-signature text-[58px] sm:text-[66px] font-normal leading-none text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
-            <p className="mt-0.5 text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
+            <p className="mt-0.5 text-[11.5px] sm:text-[12.5px] font-semibold tracking-[0.3em] text-[#59634C] uppercase">
               NAIL ARTIST
             </p>
-            <div className="w-9 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-1.5 sm:mt-2.5" />
+            <div className="w-10 sm:w-12 h-px bg-[#59634C]/35 mx-auto mt-2" />
           </div>
         </div>
 
-        {/* Framed Buttons Stack (Middle - Centered with Generous Padding) */}
+        {/* Framed Buttons Stack (Middle - Generous & Luxurious Padding) */}
         <div className="w-full px-6 sm:px-7 space-y-3 sm:space-y-3.5 my-auto flex-shrink-0">
           <button
             onClick={() => setActiveModal('about')}
-            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             About Me
           </button>
@@ -86,21 +86,21 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-2 w-full">
             <button
               onClick={() => setActiveModal('clean-beauty')}
-              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Clean Beauty
             </button>
 
             <button
               onClick={() => setActiveModal('bridal')}
-              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Bridal
             </button>
 
             <button
               onClick={() => setActiveModal('editorial')}
-              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Editorial
             </button>
@@ -108,14 +108,14 @@ export default function Home() {
 
           <button
             onClick={() => setActiveModal('reviews')}
-            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             The Experience
           </button>
 
           <button
             onClick={() => setActiveModal('book')}
-            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             Enquiries
           </button>
