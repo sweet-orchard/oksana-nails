@@ -884,9 +884,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <img id="lightbox-img" src="" alt="Full view preview"
-                    class="max-w-full max-h-[82vh] object-contain rounded-none shadow-2xl border border-white/10" />
-                <p id="lightbox-caption"
-                    class="text-[11px] tracking-widest text-[#E2DED4] uppercase mt-3 font-light text-center"></p>
+                    class="max-w-full max-h-[85vh] object-contain rounded-none shadow-2xl border border-white/10" />
             </div>
         </div>
 
@@ -926,13 +924,11 @@
             }
         }
 
-        function openLightbox(src, caption) {
+        function openLightbox(src) {
             const modal = document.getElementById('lightbox-modal');
             const img = document.getElementById('lightbox-img');
-            const cap = document.getElementById('lightbox-caption');
             if (modal && img) {
                 img.src = src;
-                if (cap) cap.textContent = caption || '';
                 modal.classList.add('modal-open');
                 document.body.style.overflow = 'hidden';
             }

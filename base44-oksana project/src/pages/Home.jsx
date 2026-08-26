@@ -717,14 +717,9 @@ export default function Home() {
               </button>
               <Image 
                 src={lightbox.src} 
-                alt={lightbox.caption || 'Preview'} 
-                className="max-w-full max-h-[82vh] object-contain rounded-none shadow-2xl border border-white/10" 
+                alt="Preview" 
+                className="max-w-full max-h-[85vh] object-contain rounded-none shadow-2xl border border-white/10" 
               />
-              {lightbox.caption && (
-                <p className="text-[11px] tracking-widest text-[#E2DED4] uppercase mt-3 font-light text-center">
-                  {lightbox.caption}
-                </p>
-              )}
             </div>
           </div>
         )}
