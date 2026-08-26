@@ -30,7 +30,7 @@ export default function Home() {
         <div className="w-full flex flex-col items-center flex-shrink-0">
           
           {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[20vh] max-h-[160px] min-h-[115px] sm:h-[230px] overflow-hidden bg-[#23271F]">
+          <div className="relative w-full h-[21vh] max-h-[175px] min-h-[130px] sm:h-[240px] overflow-hidden bg-[#23271F]">
             <Image
               src="/images/hero-detail.jpeg"
               alt="Oksana Nail Studio Aesthetic"
@@ -41,18 +41,18 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
 
             {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-3 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+            <div className="absolute top-3.5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
               <Image
                 src="/images/logo-light.png"
                 alt="OXINAILS"
-                className="h-6 sm:h-9 w-auto max-w-[185px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
+                className="h-7 sm:h-9 w-auto max-w-[200px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
               />
             </div>
           </div>
 
-          {/* Circular Overlapping Avatar */}
-          <div className="relative -mt-10 sm:-mt-18 z-10">
-            <div className="w-[82px] h-[82px] sm:w-36 sm:h-36 rounded-full overflow-hidden border-[3.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
+          {/* Circular Overlapping Avatar (Bigger & Prominent) */}
+          <div className="relative -mt-13 sm:-mt-18 z-10">
+            <div className="w-[105px] h-[105px] sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
               <Image
                 src="/images/hero-portrait.png"
                 alt="Oksana - Nail Technician"
@@ -61,15 +61,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Name & Title (Signature script font matching reference) */}
-          <div className="text-center px-6 mt-1 sm:mt-2.5">
-            <h1 className="font-signature text-[38px] sm:text-[56px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
+          {/* Name & Title (Signature script font matching reference - Bigger & Prominent) */}
+          <div className="text-center px-6 mt-1.5 sm:mt-2.5">
+            <h1 className="font-signature text-[50px] sm:text-[58px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
-            <p className="mt-0.5 text-[9px] sm:text-[11px] font-semibold tracking-[0.26em] text-[#59634C] uppercase">
+            <p className="mt-0.5 text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
               NAIL ARTIST
             </p>
-            <div className="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-1 sm:mt-2.5" />
+            <div className="w-9 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-1.5 sm:mt-2.5" />
           </div>
         </div>
 
