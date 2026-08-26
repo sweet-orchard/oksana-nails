@@ -159,15 +159,15 @@
 <body
     class="bg-[#161814] min-h-screen flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
 
-    <!-- Main Card Container (Mobile-first, Fits 100vh, Centered Ref-Design Layout) -->
+    <!-- Main Card Container (Mobile-first, Centered Ref-Design Layout) -->
     <main
-        class="w-full max-w-[440px] paper-texture min-h-[100dvh] sm:min-h-[780px] h-[100dvh] sm:h-auto shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border-0 sm:border sm:border-[#2D3227]/40 sm:rounded-lg">
+        class="w-full max-w-[440px] paper-texture min-h-screen md:min-h-[820px] shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border md:border-[#2D3227]/40 md:rounded-lg">
 
         <!-- Header & Profile Section -->
         <div class="w-full flex flex-col items-center">
 
             <!-- Top Banner Image with Brand Logo Overlay ON TOP of it -->
-            <div class="relative w-full h-[145px] sm:h-[185px] overflow-hidden bg-[#23271F] shrink-0">
+            <div class="relative w-full h-[230px] sm:h-[250px] overflow-hidden bg-[#23271F]">
                 <img src="images/hero-detail.jpeg" onerror="this.onerror=null; this.src='images/hero-detail.png';"
                     alt="Oksana Nail Aesthetics Studio Flatlay"
                     class="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95" />
@@ -179,16 +179,16 @@
 
                 <!-- Brand Logo ON TOP of the image -->
                 <div
-                    class="absolute top-4 sm:top-5 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+                    class="absolute top-5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
                     <img src="images/logo-light.png" alt="OXINAILS"
-                        class="h-7 sm:h-8 w-auto max-w-[210px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]" />
+                        class="h-8 sm:h-9 w-auto max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]" />
                 </div>
             </div>
 
             <!-- Overlapping Circular Profile Avatar -->
-            <div class="relative -mt-11 sm:-mt-14 z-10 shrink-0">
+            <div class="relative -mt-16 sm:-mt-20 z-10">
                 <div
-                    class="w-[88px] h-[88px] sm:w-[110px] sm:h-[110px] rounded-full overflow-hidden border-[4px] border-[#F8F6F0] shadow-lg bg-[#23271F]">
+                    class="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
                     <img src="images/hero-portrait.png"
                         onerror="this.onerror=null; this.src='images/portait for about me.jpeg';"
                         alt="Oksana - Nail Technician & Artist"
@@ -197,46 +197,46 @@
             </div>
 
             <!-- Name & Subtitle (Signature script font matching reference) -->
-            <div class="text-center px-6 mt-1 sm:mt-2 shrink-0">
+            <div class="text-center px-6 mt-3">
                 <h1
-                    class="font-signature text-[42px] sm:text-[54px] font-normal leading-none text-[#23271F] select-none tracking-normal">
+                    class="font-signature text-[52px] sm:text-[60px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
                     Oksana
                 </h1>
                 <p
-                    class="mt-1 text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
+                    class="mt-0.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
                     NAIL ARTIST
                 </p>
-                <div class="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-2 sm:mt-2.5"></div>
+                <div class="w-10 h-px bg-[#59634C]/30 mx-auto mt-3"></div>
             </div>
 
             <!-- Framed Buttons Stack (Matching Reference) -->
-            <div class="w-full px-6 sm:px-7 mt-3.5 sm:mt-5 space-y-2 sm:space-y-2.5">
+            <div class="w-full px-7 mt-8 space-y-3">
 
                 <!-- 1. ABOUT ME -->
-                <button onclick="openModal('about-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                <button onclick="openModal('about-modal')" class="ref-button">
                     <span>About Me</span>
                 </button>
 
                 <!-- 2. Three Inline Portfolio Buttons (Horizontal Row) -->
                 <div class="grid grid-cols-3 gap-2 w-full">
-                    <button onclick="openModal('clean-beauty-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
-                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Clean Beauty</span>
+                    <button onclick="openModal('clean-beauty-modal')" class="ref-button !px-1 !py-3.5 text-center">
+                        <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Clean Beauty</span>
                     </button>
-                    <button onclick="openModal('bridal-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
-                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Bridal</span>
+                    <button onclick="openModal('bridal-modal')" class="ref-button !px-1 !py-3.5 text-center">
+                        <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Bridal</span>
                     </button>
-                    <button onclick="openModal('editorial-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3 text-center">
-                        <span class="text-[9.5px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em]">Editorial</span>
+                    <button onclick="openModal('editorial-modal')" class="ref-button !px-1 !py-3.5 text-center">
+                        <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Editorial</span>
                     </button>
                 </div>
 
                 <!-- 3. THE EXPERIENCE -->
-                <button onclick="openModal('reviews-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                <button onclick="openModal('reviews-modal')" class="ref-button">
                     <span>The Experience</span>
                 </button>
 
                 <!-- 4. ENQUIRIES -->
-                <button onclick="openModal('book-modal')" class="ref-button !py-2.5 sm:!py-3 !text-[11px] sm:!text-xs">
+                <button onclick="openModal('book-modal')" class="ref-button">
                     <span>Enquiries</span>
                 </button>
             </div>
@@ -244,33 +244,33 @@
         </div>
 
         <!-- Footer / Contact Section (Matching Reference) -->
-        <div class="w-full px-6 sm:px-7 pt-3.5 sm:pt-6 pb-3.5 sm:pb-6 text-center shrink-0">
+        <div class="w-full px-7 pt-10 pb-9 text-center">
 
-            <div class="inline-block border-b border-[#2D3227]/30 pb-1 mb-2.5 sm:mb-3 px-3">
-                <p class="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-[0.26em] text-[#23271F] select-none">
+            <div class="inline-block border-b border-[#2D3227]/30 pb-1.5 mb-5 px-4">
+                <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-[#23271F] select-none">
                     Contact Me
                 </p>
             </div>
 
             <!-- 2 Minimalist Icons: Email, WhatsApp -->
-            <div class="flex items-center justify-center gap-3.5 sm:gap-4">
+            <div class="flex items-center justify-center gap-4">
 
                 <!-- Email Envelope (oxi.nails6@gmail.com) -->
-                <a href="mailto:oxi.nails6@gmail.com" title="Email Oksana" class="icon-circle-btn !w-9 !h-9 sm:!w-10 sm:!h-10 text-sm sm:text-base"
+                <a href="mailto:oxi.nails6@gmail.com" title="Email Oksana" class="icon-circle-btn text-base"
                     aria-label="Send Email">
                     <i class="fa-regular fa-envelope"></i>
                 </a>
 
                 <!-- WhatsApp -->
                 <a href="https://wa.me/447472338158" target="_blank" rel="noopener noreferrer" title="WhatsApp Oksana"
-                    class="icon-circle-btn !w-9 !h-9 sm:!w-10 sm:!h-10 text-sm sm:text-base" aria-label="WhatsApp / Chat">
+                    class="icon-circle-btn text-base" aria-label="WhatsApp / Chat">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
 
             </div>
 
             <!-- Bristol & Copyright Info -->
-            <div class="mt-2 sm:mt-3 text-[7.5px] sm:text-[8px] uppercase tracking-[0.2em] text-[#868B7D]">
+            <div class="mt-6 text-[8px] uppercase tracking-[0.22em] text-[#868B7D]">
                 <span>Bristol, UK · © 2026 Oksana</span>
             </div>
         </div>

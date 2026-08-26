@@ -23,14 +23,14 @@ export default function Home() {
 
   return (
     <div className="bg-[#161814] min-h-screen flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
-      {/* Main Container (Card Matching Reference, Fits 100vh on mobile) */}
-      <main className="w-full max-w-[440px] bg-[#F8F6F0] min-h-[100dvh] sm:min-h-[780px] h-[100dvh] sm:h-auto shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border-0 sm:border sm:border-[#2D3227]/40 sm:rounded-lg">
+      {/* Main Container (Card Matching Reference) */}
+      <main className="w-full max-w-[440px] bg-[#F8F6F0] min-h-screen md:min-h-[820px] shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border md:border-[#2D3227]/40 md:rounded-lg">
         
         {/* Header & Profile Content */}
         <div className="w-full flex flex-col items-center">
           
           {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[145px] sm:h-[185px] overflow-hidden bg-[#23271F] shrink-0">
+          <div className="relative w-full h-[230px] sm:h-[250px] overflow-hidden bg-[#23271F]">
             <Image
               src="/images/hero-detail.jpeg"
               alt="Oksana Nail Studio Aesthetic"
@@ -41,18 +41,18 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
 
             {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-4 sm:top-5 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+            <div className="absolute top-5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
               <Image
                 src="/images/logo-light.png"
                 alt="OXINAILS"
-                className="h-7 sm:h-8 w-auto max-w-[210px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
+                className="h-8 sm:h-9 w-auto max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
               />
             </div>
           </div>
 
           {/* Circular Overlapping Avatar */}
-          <div className="relative -mt-11 sm:-mt-14 z-10 shrink-0">
-            <div className="w-[88px] h-[88px] sm:w-[110px] sm:h-[110px] rounded-full overflow-hidden border-[4px] border-[#F8F6F0] shadow-lg bg-[#23271F]">
+          <div className="relative -mt-16 sm:-mt-20 z-10">
+            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
               <Image
                 src="/images/hero-portrait.png"
                 alt="Oksana - Nail Technician"
@@ -62,21 +62,21 @@ export default function Home() {
           </div>
 
           {/* Name & Title (Signature script font matching reference) */}
-          <div className="text-center px-6 mt-1 sm:mt-2 shrink-0">
-            <h1 className="font-signature text-[42px] sm:text-[54px] font-normal leading-none text-[#23271F] select-none tracking-normal">
+          <div className="text-center px-6 mt-3">
+            <h1 className="font-signature text-[52px] sm:text-[60px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
-            <p className="mt-1 text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
+            <p className="mt-0.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
               NAIL ARTIST
             </p>
-            <div className="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-2 sm:mt-2.5" />
+            <div className="w-10 h-px bg-[#59634C]/30 mx-auto mt-3" />
           </div>
 
           {/* Framed Buttons Stack */}
-          <div className="w-full px-6 sm:px-7 mt-3.5 sm:mt-5 space-y-2 sm:space-y-2.5">
+          <div className="w-full px-7 mt-8 space-y-3">
             <button
               onClick={() => setActiveModal('about')}
-              className="w-full py-2.5 sm:py-3 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+              className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
             >
               About Me
             </button>
@@ -85,21 +85,21 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-2 w-full">
               <button
                 onClick={() => setActiveModal('clean-beauty')}
-                className="w-full py-2.5 sm:py-3 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] sm:tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+                className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
               >
                 Clean Beauty
               </button>
 
               <button
                 onClick={() => setActiveModal('bridal')}
-                className="w-full py-2.5 sm:py-3 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] sm:tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+                className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
               >
                 Bridal
               </button>
 
               <button
                 onClick={() => setActiveModal('editorial')}
-                className="w-full py-2.5 sm:py-3 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] sm:tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+                className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
               >
                 Editorial
               </button>
@@ -107,14 +107,14 @@ export default function Home() {
 
             <button
               onClick={() => setActiveModal('reviews')}
-              className="w-full py-2.5 sm:py-3 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+              className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
             >
               The Experience
             </button>
 
             <button
               onClick={() => setActiveModal('book')}
-              className="w-full py-2.5 sm:py-3 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+              className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
             >
               Enquiries
             </button>
@@ -123,21 +123,21 @@ export default function Home() {
         </div>
 
         {/* Contact Me Footer */}
-        <div className="w-full px-6 sm:px-7 pt-3.5 sm:pt-6 pb-3.5 sm:pb-6 text-center shrink-0">
-          <div className="inline-block border-b border-[#2D3227]/30 pb-1 mb-2.5 sm:mb-3 px-3">
-            <p className="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-[0.26em] text-[#23271F] select-none">
+        <div className="w-full px-7 pt-10 pb-9 text-center">
+          <div className="inline-block border-b border-[#2D3227]/30 pb-1.5 mb-5 px-4">
+            <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-[#23271F] select-none">
               Contact Me
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-3.5 sm:gap-4">
+          <div className="flex items-center justify-center gap-4">
             {/* Email */}
             <a
               href="mailto:oxi.nails6@gmail.com"
               title="Email Oksana"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm group"
+              className="w-12 h-12 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm group"
             >
-              <Mail className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform" />
+              <Mail className="h-5 w-5 group-hover:scale-110 transition-transform" />
             </a>
 
             {/* WhatsApp */}
@@ -146,13 +146,13 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               title="Chat on WhatsApp"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#59634C] hover:border-[#59634C] hover:text-white transition-all duration-300 shadow-sm group"
+              className="w-12 h-12 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#59634C] hover:border-[#59634C] hover:text-white transition-all duration-300 shadow-sm group"
             >
-              <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform" />
+              <MessageCircle className="h-5 w-5 group-hover:scale-110 transition-transform" />
             </a>
           </div>
 
-          <div className="mt-2 sm:mt-3 text-[7.5px] sm:text-[8px] uppercase tracking-[0.2em] text-[#868B7D]">
+          <div className="mt-6 text-[8px] uppercase tracking-[0.22em] text-[#868B7D]">
             <span>Bristol, UK · © 2026 Oksana</span>
           </div>
         </div>
