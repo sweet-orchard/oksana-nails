@@ -62,18 +62,21 @@ export default function Home() {
           </div>
 
           {/* Name & Title (Signature script font matching reference) */}
-          <div className="text-center px-6 mt-3">
-            <h1 className="font-signature text-[52px] sm:text-[60px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
+          <div className="text-center px-6 mt-2 sm:mt-3">
+            <h1 className="font-signature text-[50px] sm:text-[58px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
             <p className="mt-0.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
               NAIL ARTIST
             </p>
-            <div className="w-10 h-px bg-[#59634C]/30 mx-auto mt-3" />
+            <p className="mt-0.5 text-[8.5px] sm:text-[9.5px] font-medium tracking-[0.22em] text-[#80796F] uppercase">
+              Bristol, UK
+            </p>
+            <div className="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-2 sm:mt-2.5" />
           </div>
 
           {/* Framed Buttons Stack */}
-          <div className="w-full px-7 mt-8 space-y-3">
+          <div className="w-full px-7 mt-6 sm:mt-8 space-y-3">
             <button
               onClick={() => setActiveModal('about')}
               className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
@@ -123,9 +126,9 @@ export default function Home() {
         </div>
 
         {/* Footer Info */}
-        <div className="w-full px-7 pt-6 pb-7 text-center">
+        <div className="w-full px-7 pt-4 pb-5 text-center">
           <div className="text-[8px] uppercase tracking-[0.22em] text-[#868B7D]">
-            <span>Bristol, UK · © 2026 Oksana</span>
+            <span>© 2026 Oksana · Bristol, UK</span>
           </div>
         </div>
 
