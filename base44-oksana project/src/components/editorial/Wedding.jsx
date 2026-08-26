@@ -12,11 +12,6 @@ export default function Wedding() {
         </div>
       </div>
       <div className="relative mt-9 h-[570px]">
-        <div className="absolute right-0 top-4 z-20 bg-[#34372D] px-3.5 py-1.5 text-white shadow-xl flex items-baseline gap-2">
-          <span className="text-[8px] uppercase tracking-[0.22em] text-[#C5CBB7]">from</span>
-          <span className="font-serif text-base font-medium tracking-tight">£95</span>
-          <span className="text-[8px] uppercase tracking-[0.16em] text-[#E0E5D7] border-l border-white/20 pl-2">bridal set</span>
-        </div>
         <div className="absolute left-[14%] top-0 h-[390px] w-[62%] shadow-md overflow-hidden">
           <div className="w-full h-full flex flex-col items-center justify-center bg-[#ded8ce] text-[#7A746B] p-3 text-center select-none">
             <span className="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>

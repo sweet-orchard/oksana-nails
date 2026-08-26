@@ -12,11 +12,6 @@ export default function Editorial() {
         </div>
       </div>
       <div className="relative mt-10 h-[570px] bg-[#23251F] p-4 shadow-2xl">
-        <div className="absolute right-4 top-4 z-20 bg-[#F9F7F2] px-3.5 py-1.5 text-[#23251F] shadow-xl flex items-baseline gap-2">
-          <span className="text-[8px] uppercase tracking-[0.22em] text-[#626A52]">from</span>
-          <span className="font-serif text-base font-semibold tracking-tight">£140</span>
-          <span className="text-[8px] uppercase tracking-[0.16em] text-[#555849] border-l border-black/15 pl-2">per project</span>
-        </div>
         <div className="absolute left-4 top-4 h-[320px] w-[53%] shadow-lg overflow-hidden">
           <div className="w-full h-full flex flex-col items-center justify-center bg-[#181a15] text-[#8A8F7C] p-3 text-center select-none">
             <span className="text-[8px] uppercase tracking-[0.22em] font-medium opacity-80">Photo Placeholder</span>

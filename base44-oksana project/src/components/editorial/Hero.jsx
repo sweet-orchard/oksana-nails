@@ -38,7 +38,7 @@ export default function Hero() {
             <a href="https://wa.me/447472338158" target="_blank" rel="noreferrer" className="booking-link bg-[#626A52] text-white hover:bg-[#525944] transition-colors">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
-            <a href="mailto:oksana.nails@gmail.com" className="booking-link border border-[#555849] text-[#F9F7F2] hover:bg-white/5 transition-colors">
+            <a href="mailto:oxi.nails6@gmail.com" className="booking-link border border-[#555849] text-[#F9F7F2] hover:bg-white/5 transition-colors">
               <Mail className="h-4 w-4" /> Email Oksana
             </a>
           </div>
