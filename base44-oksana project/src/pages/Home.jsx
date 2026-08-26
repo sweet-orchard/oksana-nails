@@ -122,37 +122,9 @@ export default function Home() {
 
         </div>
 
-        {/* Contact Me Footer */}
-        <div className="w-full px-7 pt-10 pb-9 text-center">
-          <div className="inline-block border-b border-[#2D3227]/30 pb-1.5 mb-5 px-4">
-            <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-[#23271F] select-none">
-              Contact Me
-            </p>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            {/* Email */}
-            <a
-              href="mailto:oxi.nails6@gmail.com"
-              title="Email Oksana"
-              className="w-12 h-12 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm group"
-            >
-              <Mail className="h-5 w-5 group-hover:scale-110 transition-transform" />
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/447472338158"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Chat on WhatsApp"
-              className="w-12 h-12 rounded-full border border-[#2D3227] flex items-center justify-center text-[#23271F] hover:bg-[#59634C] hover:border-[#59634C] hover:text-white transition-all duration-300 shadow-sm group"
-            >
-              <MessageCircle className="h-5 w-5 group-hover:scale-110 transition-transform" />
-            </a>
-          </div>
-
-          <div className="mt-6 text-[8px] uppercase tracking-[0.22em] text-[#868B7D]">
+        {/* Footer Info */}
+        <div className="w-full px-7 pt-6 pb-7 text-center">
+          <div className="text-[8px] uppercase tracking-[0.22em] text-[#868B7D]">
             <span>Bristol, UK · © 2026 Oksana</span>
           </div>
         </div>
