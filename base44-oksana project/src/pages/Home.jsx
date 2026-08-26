@@ -22,109 +22,104 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-[#161814] min-h-[100dvh] flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
+    <div className="bg-[#161814] min-h-screen flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
       {/* Main Container (Card Matching Reference) */}
-      <main className="w-full max-w-[440px] bg-[#F8F6F0] min-h-[100dvh] md:min-h-[800px] shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between border md:border-[#2D3227]/40 md:rounded-lg">
+      <main className="w-full max-w-[440px] bg-[#F8F6F0] shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col items-center border md:border-[#2D3227]/40 md:rounded-lg my-auto">
         
-        {/* Header & Profile Content */}
-        <div className="w-full flex flex-col items-center">
+        {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
+        <div className="relative w-full h-[175px] sm:h-[240px] overflow-hidden bg-[#23271F]">
+          <Image
+            src="/images/hero-detail.jpeg"
+            alt="Oksana Nail Studio Aesthetic"
+            className="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95"
+          />
           
-          {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[150px] sm:h-[230px] overflow-hidden bg-[#23271F]">
+          {/* Subtle warm vignette overlay for crisp contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
+
+          {/* Brand Logo ON TOP of the image */}
+          <div className="absolute top-4 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
             <Image
-              src="/images/hero-detail.jpeg"
-              alt="Oksana Nail Studio Aesthetic"
-              className="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95"
+              src="/images/logo-light.png"
+              alt="OXINAILS"
+              className="h-7 sm:h-9 w-auto max-w-[210px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
             />
-            
-            {/* Subtle warm vignette overlay for crisp contrast */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
-
-            {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-3.5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
-              <Image
-                src="/images/logo-light.png"
-                alt="OXINAILS"
-                className="h-6.5 sm:h-9 w-auto max-w-[195px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
-              />
-            </div>
           </div>
+        </div>
 
-          {/* Circular Overlapping Avatar */}
-          <div className="relative -mt-12 sm:-mt-18 z-10">
-            <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
-              <Image
-                src="/images/hero-portrait.png"
-                alt="Oksana - Nail Technician"
-                className="w-full h-full object-cover object-top scale-105"
-              />
-            </div>
+        {/* Circular Overlapping Avatar */}
+        <div className="relative -mt-14 sm:-mt-18 z-10">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
+            <Image
+              src="/images/hero-portrait.png"
+              alt="Oksana - Nail Technician"
+              className="w-full h-full object-cover object-top scale-105"
+            />
           </div>
+        </div>
 
-          {/* Name & Title (Signature script font matching reference) */}
-          <div className="text-center px-6 mt-1 sm:mt-3">
-            <h1 className="font-signature text-[44px] sm:text-[58px] font-normal leading-none text-[#23271F] select-none tracking-normal">
-              Oksana
-            </h1>
-            <p className="mt-0.5 text-[9.5px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
-              NAIL ARTIST
-            </p>
-            <div className="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-1.5 sm:mt-2.5" />
-          </div>
+        {/* Name & Title (Signature script font matching reference) */}
+        <div className="text-center px-6 mt-2.5 sm:mt-3">
+          <h1 className="font-signature text-[50px] sm:text-[58px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
+            Oksana
+          </h1>
+          <p className="mt-0.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
+            NAIL ARTIST
+          </p>
+          <div className="w-10 h-px bg-[#59634C]/30 mx-auto mt-2.5" />
+        </div>
 
-          {/* Framed Buttons Stack */}
-          <div className="w-full px-6 sm:px-7 mt-3.5 sm:mt-8 space-y-2 sm:space-y-3">
+        {/* Framed Buttons Stack */}
+        <div className="w-full px-7 mt-6 sm:mt-7 space-y-3">
+          <button
+            onClick={() => setActiveModal('about')}
+            className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+          >
+            About Me
+          </button>
+
+          {/* Three Inline Category Buttons in One Horizontal Row */}
+          <div className="grid grid-cols-3 gap-2 w-full">
             <button
-              onClick={() => setActiveModal('about')}
-              className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+              onClick={() => setActiveModal('clean-beauty')}
+              className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
-              About Me
-            </button>
-
-            {/* Three Inline Category Buttons in One Horizontal Row */}
-            <div className="grid grid-cols-3 gap-2 w-full">
-              <button
-                onClick={() => setActiveModal('clean-beauty')}
-                className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
-              >
-                Clean Beauty
-              </button>
-
-              <button
-                onClick={() => setActiveModal('bridal')}
-                className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
-              >
-                Bridal
-              </button>
-
-              <button
-                onClick={() => setActiveModal('editorial')}
-                className="w-full py-2.5 sm:py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
-              >
-                Editorial
-              </button>
-            </div>
-
-            <button
-              onClick={() => setActiveModal('reviews')}
-              className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
-            >
-              The Experience
+              Clean Beauty
             </button>
 
             <button
-              onClick={() => setActiveModal('book')}
-              className="w-full py-2.5 sm:py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+              onClick={() => setActiveModal('bridal')}
+              className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
-              Enquiries
+              Bridal
+            </button>
+
+            <button
+              onClick={() => setActiveModal('editorial')}
+              className="w-full py-3.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+            >
+              Editorial
             </button>
           </div>
 
+          <button
+            onClick={() => setActiveModal('reviews')}
+            className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+          >
+            The Experience
+          </button>
+
+          <button
+            onClick={() => setActiveModal('book')}
+            className="w-full py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+          >
+            Enquiries
+          </button>
         </div>
 
         {/* Footer Info */}
-        <div className="w-full px-6 sm:px-7 pt-2.5 pb-3 sm:pt-4 sm:pb-5 text-center">
-          <div className="text-[8.5px] sm:text-[9px] uppercase tracking-[0.24em] text-[#868B7D]">
+        <div className="w-full px-7 pt-6 pb-7 text-center">
+          <div className="text-[8.5px] uppercase tracking-[0.24em] text-[#868B7D]">
             <span>Bristol, UK · © 2026 Oksana</span>
           </div>
         </div>
