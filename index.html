@@ -127,21 +127,37 @@
             box-shadow: 0 4px 12px rgba(35, 39, 31, 0.18);
         }
 
-        /* Modal backdrop transition */
-        .modal-drawer {
-            transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .modal-hidden {
+        /* Modal Backdrop & Drawer Animations */
+        .modal-backdrop {
             opacity: 0;
+            visibility: hidden;
             pointer-events: none;
-            transform: translateY(100%);
+            transition: opacity 0.28s ease, visibility 0.28s ease;
         }
 
-        .modal-visible {
+        .modal-backdrop.modal-open {
             opacity: 1;
+            visibility: visible;
             pointer-events: auto;
-            transform: translateY(0%);
+        }
+
+        /* Inner Modal Dialog Animation */
+        .modal-dialog {
+            transform: translateY(100%);
+            transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (min-width: 640px) {
+            .modal-dialog {
+                transform: translateY(16px) scale(0.97);
+                opacity: 0;
+                transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+            }
+        }
+
+        .modal-backdrop.modal-open .modal-dialog {
+            transform: translateY(0%) scale(1);
+            opacity: 1;
         }
 
         /* Hide scrollbars */
@@ -279,10 +295,10 @@
         <!-- MODAL: ABOUT ME                            -->
         <!-- ========================================== -->
         <div id="about-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'about-modal')">
             <div
-                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('about-modal')"
                     class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
@@ -378,10 +394,10 @@
         <!-- MODAL 1: CLEAN BEAUTY & BIAB             -->
         <!-- ========================================== -->
         <div id="clean-beauty-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'clean-beauty-modal')">
             <div
-                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('clean-beauty-modal')"
                     class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
@@ -483,10 +499,10 @@
         <!-- MODAL 2: BRIDAL & OCCASION                -->
         <!-- ========================================== -->
         <div id="bridal-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'bridal-modal')">
             <div
-                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('bridal-modal')"
                     class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
@@ -567,10 +583,10 @@
         <!-- MODAL 3: EDITORIAL & ON SET               -->
         <!-- ========================================== -->
         <div id="editorial-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'editorial-modal')">
             <div
-                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20">
+                class="bg-[#E8DED1] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('editorial-modal')"
                     class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
@@ -697,10 +713,10 @@
         <!-- MODAL: BOOK AN APPOINTMENT (White Background) -->
         <!-- ========================================== -->
         <div id="book-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'book-modal')">
             <div
-                class="bg-[#F8F6F0] text-[#23271F] w-full max-w-[440px] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 shadow-2xl relative border border-[#2D3227]/20">
+                class="bg-[#F8F6F0] text-[#23271F] w-full max-w-[440px] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('book-modal')"
                     class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg">
@@ -738,28 +754,33 @@
 
 
         <!-- ========================================== -->
-        <!-- MODAL: REVIEWS (Warm Beige #E8DED1)        -->
+        <!-- MODAL: REVIEWS (The Experience)            -->
         <!-- ========================================== -->
         <div id="reviews-modal"
-            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-drawer modal-hidden transition-all duration-300"
+            class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm flex items-end sm:items-center justify-center modal-backdrop"
             onclick="handleBackdropClick(event, 'reviews-modal')">
             <div
-                class="bg-[#E8DED1] text-[#34372D] w-full max-w-[440px] max-h-[85vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-8 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#8D867A]/30">
+                class="bg-[#F8F6F0] w-full max-w-[440px] max-h-[88vh] rounded-t-2xl sm:rounded-xl p-6 sm:p-7 overflow-y-auto no-scrollbar shadow-2xl relative border border-[#2D3227]/20 modal-dialog">
 
                 <button onclick="closeModal('reviews-modal')"
-                    class="absolute top-5 right-5 text-stone-600 hover:text-black p-1 text-lg">
+                    class="absolute top-5 right-5 text-stone-500 hover:text-black p-1 text-lg z-20">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
 
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-[9.5px] font-medium uppercase tracking-[0.3em] text-[#605A51]">REVIEWS</span>
-                    <span class="h-px w-10 bg-[#8D867A]/50"></span>
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#59634C]">Experience</span>
+                    <span class="h-px w-8 bg-[#59634C]/40"></span>
                 </div>
 
-                <div class="space-y-8">
-                    <!-- Review: Helen (Bridal 5-Star) -->
+                <h2 class="font-serif text-2xl text-[#23271F]">The Experience</h2>
+                <p class="text-xs text-[#575B50] mt-2 mb-6 font-light">
+                    Words from our private clients and bridal parties.
+                </p>
+
+                <div class="space-y-6">
+                    <!-- Featured Review 1 (Helen Wedding) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
-                        <div class="flex items-center gap-1.5 text-[#8C6239] mb-2 text-xs">
+                        <div class="flex items-center gap-1 mb-2 text-[#8C6239] text-xs">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -767,90 +788,90 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “My wedding nails were perfect and you are so skilled at what you do xx”
+                            “Oksana is amazing at what she does. She did my nails for my wedding and they were the most beautiful nails I've ever had. She is so thorough and clearly loves what she does. I couldn't recommend her more!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — Helen
+                            — HELEN · BRIDAL CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review 1 (English) -->
+                    <!-- Review 2 (M) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Hey!!! Just wanted you to know that I have received so many compliments for the manicure you did for me! I absolutely love it and you are so so talented in recreating that design for me! Definitely recommending you to everyone I know xxx”
+                            “Oksana is such a talent! I've been getting my nails done with her for a few months now and wouldn't go anywhere else. The precision and thought she puts into every appointment is unmatched. My nails have never been healthier or looked better.”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — M · REGULAR CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review: Sooo many compliments -->
+                    <!-- Review 3 (Hannah) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Sooo many compliments on these!! I loveeeee them!”
+                            “I always look forward to my appointments with Oksana. She creates such a calm, beautiful space and her attention to detail is incredible. She really cares about the health of your natural nails. 10/10 recommend to anyone looking for quality!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — HANNAH · BIAB CARE
                         </footer>
                     </blockquote>
 
-                    <!-- Review 2 (English) -->
+                    <!-- Review 4 (Sophie) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Thank you so much for our nails 💅 you are truly talented- such an artist! 💗 we love them xx”
+                            “The best manicure in Bristol hands down. Oksana is an absolute perfectionist and an artist. My BIAB sets easily last 4+ weeks with zero chipping. So grateful to have found her studio!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — SOPHIE · CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review: They are incredible -->
+                    <!-- Review 6 (Chloe) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “They are incredible! ❤️”
+                            “Oksana is an absolute gem. My nails always look completely flawless and her cuticle work is the neatest I've ever experienced. Truly unmatched craftsmanship!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — CHLOE · CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review 3 (Ukrainian) -->
+                    <!-- Review 7 (Elena) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Дякую! Вони надзвичайні 😍😍😍 любуюся 🥰”
+                            “Every single set feels like a mini work of art. The salon vibe is serene, luxurious, and so professional. I get compliments on my nails everywhere I go!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — @mariia_sugaring_bristol
+                            — ELENA · CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review: I love my nails -->
+                    <!-- Review 8 (Rachel) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “I love my nails. Thanks”
+                            “I had damaged nails from acrylics before coming to Oksana. With her careful BIAB treatment, my natural nails are now longer and stronger than ever before!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — RACHEL · BIAB TRANSFORMATION
                         </footer>
                     </blockquote>
 
-                    <!-- Review 4 (Russian/Ukrainian client) -->
+                    <!-- Review 9 (Jessica) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Здравствуйте Оксана, хотела сказать что ногти просто супер, получила очень много комплиментов в поездке 😇❤️”
+                            “Oksana’s aesthetic eye is simply unmatched. Whether clean &amp; minimal or editorial art, she always executes it with absolute perfection.”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — JESSICA · EDITORIAL CLIENT
                         </footer>
                     </blockquote>
 
-                    <!-- Review: Thank you so much and I love my nails -->
+                    <!-- Review 10 (Mia) -->
                     <blockquote class="border-l-2 border-[#8D867A] pl-5">
                         <p class="font-serif text-[18px] sm:text-[20px] italic leading-relaxed text-[#23271F]">
-                            “Thank you so much and I love my nails. Take care”
+                            “Such a calm, pampering experience from start to finish. Highly recommend Oksana to anyone who appreciates true precision and natural nail care!”
                         </p>
                         <footer class="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                            — CLIENT FEEDBACK
+                            — MIA · CLIENT
                         </footer>
                     </blockquote>
 
@@ -871,9 +892,9 @@
         <!-- MODAL: IMAGE LIGHTBOX                      -->
         <!-- ========================================== -->
         <div id="lightbox-modal"
-            class="fixed inset-0 z-[60] bg-black/90 backdrop-blur-md flex items-center justify-center modal-hidden transition-all duration-300 p-4"
+            class="fixed inset-0 z-[60] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 modal-backdrop"
             onclick="handleBackdropClick(event, 'lightbox-modal')">
-            <div class="relative max-w-[92vw] max-h-[90vh] flex flex-col items-center"
+            <div class="relative max-w-[92vw] max-h-[90vh] flex flex-col items-center modal-dialog"
                 onclick="event.stopPropagation()">
                 <button onclick="closeModal('lightbox-modal')"
                     class="absolute -top-10 right-0 sm:-right-8 text-white/80 hover:text-white p-2 text-2xl"
@@ -894,8 +915,7 @@
         function openModal(id) {
             const modal = document.getElementById(id);
             if (modal) {
-                modal.classList.remove('modal-hidden');
-                modal.classList.add('modal-visible');
+                modal.classList.add('modal-open');
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -913,8 +933,7 @@
         function closeModal(id) {
             const modal = document.getElementById(id);
             if (modal) {
-                modal.classList.remove('modal-visible');
-                modal.classList.add('modal-hidden');
+                modal.classList.remove('modal-open');
                 document.body.style.overflow = '';
             }
         }
@@ -932,8 +951,7 @@
             if (modal && img) {
                 img.src = src;
                 if (cap) cap.textContent = caption || '';
-                modal.classList.remove('modal-hidden');
-                modal.classList.add('modal-visible');
+                modal.classList.add('modal-open');
                 document.body.style.overflow = 'hidden';
             }
         }
