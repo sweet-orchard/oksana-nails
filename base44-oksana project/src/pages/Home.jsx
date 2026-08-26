@@ -613,12 +613,10 @@ export default function Home() {
                 <X className="h-5 w-5" />
               </button>
 
-              <div className="flex items-center gap-3 mb-6">
-                <span className="text-[9.5px] font-medium uppercase tracking-[0.3em] text-[#605A51]">REVIEWS</span>
-                <span className="h-px w-10 bg-[#8D867A]/50" />
-              </div>
-
-              <div className="space-y-8">
+              <h2 className="font-serif text-2xl text-[#23271F]">The Experience</h2>
+              <p className="text-xs text-[#575B50] mt-1 mb-6 font-light">
+                Words from our private clients and bridal parties.
+              </p>
                 {/* Review: Helen (Bridal 5-Star) */}
                 <blockquote className="border-l-2 border-[#8D867A] pl-5">
                   <div className="flex items-center gap-1.5 text-[#8C6239] mb-2">
