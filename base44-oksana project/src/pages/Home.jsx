@@ -30,7 +30,7 @@ export default function Home() {
         <div className="w-full flex flex-col items-center flex-shrink-0">
           
           {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[21vh] max-h-[175px] min-h-[130px] sm:h-[240px] overflow-hidden bg-[#23271F]">
+          <div className="relative w-full h-[160px] sm:h-[230px] overflow-hidden bg-[#23271F]">
             <Image
               src="/images/hero-detail.jpeg"
               alt="Oksana Nail Studio Aesthetic"
@@ -41,7 +41,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
 
             {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-3.5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+            <div className="absolute top-4 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
               <Image
                 src="/images/logo-light.png"
                 alt="OXINAILS"
@@ -50,8 +50,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Circular Overlapping Avatar (Significantly Bigger) */}
-          <div className="relative -mt-15 sm:-mt-19 z-10">
+          {/* Circular Overlapping Avatar (Higher Overlap on Header Image) */}
+          <div className="relative -mt-[70px] sm:-mt-[76px] z-10">
             <div className="w-[124px] h-[124px] sm:w-[148px] sm:h-[148px] rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-2xl bg-[#23271F]">
               <Image
                 src="/images/hero-portrait.png"
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
 
           {/* Name & Title (Much Bigger & Impactful) */}
-          <div className="text-center px-6 mt-1 sm:mt-2.5">
+          <div className="text-center px-6 mt-1.5 sm:mt-2.5">
             <h1 className="font-signature text-[58px] sm:text-[66px] font-normal leading-none text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
