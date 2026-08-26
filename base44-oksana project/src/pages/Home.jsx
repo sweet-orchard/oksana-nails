@@ -30,7 +30,7 @@ export default function Home() {
         <div className="w-full flex flex-col items-center">
           
           {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[230px] sm:h-[250px] overflow-hidden bg-[#23271F]">
+          <div className="relative w-full h-[175px] sm:h-[240px] overflow-hidden bg-[#23271F]">
             <Image
               src="/images/hero-detail.jpeg"
               alt="Oksana Nail Studio Aesthetic"
@@ -41,18 +41,18 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
 
             {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-5 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+            <div className="absolute top-4 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
               <Image
                 src="/images/logo-light.png"
                 alt="OXINAILS"
-                className="h-8 sm:h-9 w-auto max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
+                className="h-7 sm:h-9 w-auto max-w-[210px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
               />
             </div>
           </div>
 
           {/* Circular Overlapping Avatar */}
-          <div className="relative -mt-16 sm:-mt-20 z-10">
-            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
+          <div className="relative -mt-14 sm:-mt-18 z-10">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
               <Image
                 src="/images/hero-portrait.png"
                 alt="Oksana - Nail Technician"
