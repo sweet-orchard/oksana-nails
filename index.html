@@ -173,89 +173,94 @@
 </head>
 
 <body
-    class="bg-[#161814] min-h-screen flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
+    class="bg-[#161814] h-[100dvh] overflow-hidden flex items-center justify-center p-0 md:py-8 selection:bg-[#59634C] selection:text-white">
 
-    <!-- Main Card Container (Mobile-first, Centered Ref-Design Layout) -->
+    <!-- Main Card Container (Strict 1-Screen Viewport Fit on Mobile) -->
     <main
-        class="w-full max-w-[440px] paper-texture shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col items-center border md:border-[#2D3227]/40 md:rounded-lg my-auto">
+        class="w-full max-w-[440px] paper-texture shadow-[0_20px_70px_rgba(0,0,0,0.65)] relative overflow-hidden flex flex-col justify-between h-[100dvh] sm:h-auto sm:min-h-[780px] border md:border-[#2D3227]/40 md:rounded-lg">
 
-        <!-- Top Banner Image with Brand Logo Overlay ON TOP of it -->
-        <div class="relative w-full h-[175px] sm:h-[240px] overflow-hidden bg-[#23271F]">
-            <img src="images/hero-detail.jpeg" onerror="this.onerror=null; this.src='images/hero-detail.png';"
-                alt="Oksana Nail Aesthetics Studio Flatlay"
-                class="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95" />
+        <!-- Header & Profile Section (Top) -->
+        <div class="w-full flex flex-col items-center flex-shrink-0">
 
-            <!-- Subtle warm vignette overlay for crisp contrast -->
-            <div
-                class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none">
+            <!-- Top Banner Image with Brand Logo Overlay ON TOP of it -->
+            <div class="relative w-full h-[20vh] max-h-[160px] min-h-[115px] sm:h-[230px] overflow-hidden bg-[#23271F]">
+                <img src="images/hero-detail.jpeg" onerror="this.onerror=null; this.src='images/hero-detail.png';"
+                    alt="Oksana Nail Aesthetics Studio Flatlay"
+                    class="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95" />
+
+                <!-- Subtle warm vignette overlay for crisp contrast -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none">
+                </div>
+
+                <!-- Brand Logo ON TOP of the image -->
+                <div
+                    class="absolute top-3 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
+                    <img src="images/logo-light.png" alt="OXINAILS"
+                        class="h-6 sm:h-9 w-auto max-w-[185px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]" />
+                </div>
             </div>
 
-            <!-- Brand Logo ON TOP of the image -->
-            <div
-                class="absolute top-4 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
-                <img src="images/logo-light.png" alt="OXINAILS"
-                    class="h-7 sm:h-9 w-auto max-w-[210px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]" />
+            <!-- Overlapping Circular Profile Avatar -->
+            <div class="relative -mt-10 sm:-mt-18 z-10">
+                <div
+                    class="w-[82px] h-[82px] sm:w-36 sm:h-36 rounded-full overflow-hidden border-[3.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
+                    <img src="images/hero-portrait.png"
+                        onerror="this.onerror=null; this.src='images/portait for about me.jpeg';"
+                        alt="Oksana - Nail Technician & Artist"
+                        class="w-full h-full object-cover object-top scale-105" />
+                </div>
             </div>
-        </div>
 
-        <!-- Overlapping Circular Profile Avatar -->
-        <div class="relative -mt-14 sm:-mt-18 z-10">
-            <div
-                class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-[4.5px] sm:border-[5px] border-[#F8F6F0] shadow-xl bg-[#23271F]">
-                <img src="images/hero-portrait.png"
-                    onerror="this.onerror=null; this.src='images/portait for about me.jpeg';"
-                    alt="Oksana - Nail Technician & Artist"
-                    class="w-full h-full object-cover object-top scale-105" />
+            <!-- Name & Subtitle (Signature script font matching reference) -->
+            <div class="text-center px-6 mt-1 sm:mt-2.5">
+                <h1
+                    class="font-signature text-[38px] sm:text-[56px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
+                    Oksana
+                </h1>
+                <p class="mt-0.5 text-[9px] sm:text-[11px] font-semibold tracking-[0.26em] text-[#59634C] uppercase">
+                    NAIL ARTIST
+                </p>
+                <div class="w-8 sm:w-10 h-px bg-[#59634C]/30 mx-auto mt-1 sm:mt-2.5"></div>
             </div>
+
         </div>
 
-        <!-- Name & Subtitle (Signature script font matching reference) -->
-        <div class="text-center px-6 mt-2.5 sm:mt-3">
-            <h1
-                class="font-signature text-[50px] sm:text-[58px] font-normal leading-tight text-[#23271F] select-none tracking-normal">
-                Oksana
-            </h1>
-            <p class="mt-0.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
-                NAIL ARTIST
-            </p>
-            <div class="w-10 h-px bg-[#59634C]/30 mx-auto mt-2.5"></div>
-        </div>
-
-        <!-- Framed Buttons Stack (Matching Reference) -->
-        <div class="w-full px-7 mt-6 sm:mt-7 space-y-3">
+        <!-- Framed Buttons Stack (Middle - Perfectly Centered) -->
+        <div class="w-full px-6 sm:px-7 space-y-2 sm:space-y-3 my-auto flex-shrink-0">
 
             <!-- 1. ABOUT ME -->
-            <button onclick="openModal('about-modal')" class="ref-button">
+            <button onclick="openModal('about-modal')" class="ref-button !py-2.5 sm:!py-3.5">
                 <span>About Me</span>
             </button>
 
             <!-- 2. Three Inline Portfolio Buttons (Horizontal Row) -->
             <div class="grid grid-cols-3 gap-2 w-full">
-                <button onclick="openModal('clean-beauty-modal')" class="ref-button !px-1 !py-3.5 text-center">
-                    <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Clean Beauty</span>
+                <button onclick="openModal('clean-beauty-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3.5 text-center">
+                    <span class="text-[9.5px] sm:text-[11px] tracking-[0.1em]">Clean Beauty</span>
                 </button>
-                <button onclick="openModal('bridal-modal')" class="ref-button !px-1 !py-3.5 text-center">
-                    <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Bridal</span>
+                <button onclick="openModal('bridal-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3.5 text-center">
+                    <span class="text-[9.5px] sm:text-[11px] tracking-[0.1em]">Bridal</span>
                 </button>
-                <button onclick="openModal('editorial-modal')" class="ref-button !px-1 !py-3.5 text-center">
-                    <span class="text-[10px] sm:text-[11px] tracking-[0.12em]">Editorial</span>
+                <button onclick="openModal('editorial-modal')" class="ref-button !px-1 !py-2.5 sm:!py-3.5 text-center">
+                    <span class="text-[9.5px] sm:text-[11px] tracking-[0.1em]">Editorial</span>
                 </button>
             </div>
 
             <!-- 3. THE EXPERIENCE -->
-            <button onclick="openModal('reviews-modal')" class="ref-button">
+            <button onclick="openModal('reviews-modal')" class="ref-button !py-2.5 sm:!py-3.5">
                 <span>The Experience</span>
             </button>
 
             <!-- 4. ENQUIRIES -->
-            <button onclick="openModal('book-modal')" class="ref-button">
+            <button onclick="openModal('book-modal')" class="ref-button !py-2.5 sm:!py-3.5">
                 <span>Enquiries</span>
             </button>
         </div>
 
-        <!-- Footer Info -->
-        <div class="w-full px-7 pt-6 pb-7 text-center">
-            <div class="text-[8.5px] uppercase tracking-[0.24em] text-[#868B7D]">
+        <!-- Footer Info (Bottom) -->
+        <div class="w-full px-6 sm:px-7 pb-3 sm:pb-6 pt-1 text-center flex-shrink-0">
+            <div class="text-[8px] sm:text-[8.5px] uppercase tracking-[0.24em] text-[#868B7D]">
                 <span>Bristol, UK · © 2026 Oksana</span>
             </div>
         </div>
