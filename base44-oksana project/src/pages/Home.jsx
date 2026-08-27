@@ -310,7 +310,7 @@ export default function Home() {
 
                   <div 
                     onClick={() => setLightbox({ src: '/images/bridal images/3.jpeg', caption: 'Bridal 3 — Wedding Day Aesthetics' })}
-                    className="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
+                    className="w-full aspect-[4/3] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                   >
                     <Image src="/images/bridal images/3.jpeg" alt="Bridal 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
