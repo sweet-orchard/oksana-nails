@@ -12,7 +12,7 @@ export default function Hero() {
         </div>
         <div className="relative mt-4 mb-2 h-[355px]">
           <div className="absolute left-0 top-0 h-[275px] w-[53%] border border-[#555849] p-1.5 shadow-lg bg-[#2b2d26]">
-            <Image src="/images/hero-portrait.png" alt="Editorial portrait of Oksana" className="h-full w-full editorial-photo" />
+            <Image src="/images/portrait 2.jpeg" alt="Editorial portrait of Oksana" className="h-full w-full editorial-photo" />
           </div>
           <div className="absolute right-0 top-0 z-10 text-right pr-1">
             <h1 className="font-serif text-[36px] sm:text-[46px] leading-none tracking-[-0.03em] text-[#F9F7F2] select-none drop-shadow-md">

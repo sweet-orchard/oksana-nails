@@ -29,55 +29,46 @@ export default function Home() {
         {/* Header & Profile Content (Top) */}
         <div className="w-full flex flex-col items-center flex-shrink-0">
           
-          {/* Top Banner Image with Brand Logo Overlay ON TOP of it */}
-          <div className="relative w-full h-[160px] sm:h-[230px] overflow-hidden bg-[#23271F]">
+          {/* Top Banner Image */}
+          <div className="relative w-full h-[125px] sm:h-[185px] overflow-hidden bg-[#23271F]">
             <Image
               src="/images/hero-detail.jpeg"
               alt="Oksana Nail Studio Aesthetic"
-              className="w-full h-full object-cover object-[center_30%] filter contrast-[1.05] brightness-95"
+              className="w-full h-full object-cover object-[center_35%] filter contrast-[1.05] brightness-95"
             />
             
             {/* Subtle warm vignette overlay for crisp contrast */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/50 pointer-events-none" />
-
-            {/* Brand Logo ON TOP of the image */}
-            <div className="absolute top-4 sm:top-6 left-0 right-0 flex items-center justify-center z-10 px-6 pointer-events-none">
-              <Image
-                src="/images/logo-light.png"
-                alt="OXINAILS"
-                className="h-7 sm:h-9 w-auto max-w-[200px] sm:max-w-[230px] object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"
-              />
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 pointer-events-none" />
           </div>
 
           {/* Circular Overlapping Avatar (Higher Overlap on Header Image) */}
-          <div className="relative -mt-[70px] sm:-mt-[76px] z-10">
-            <div className="w-[124px] h-[124px] sm:w-[148px] sm:h-[148px] rounded-full overflow-hidden border-[5px] border-[#F8F6F0] shadow-2xl bg-[#23271F]">
+          <div className="relative -mt-[58px] sm:-mt-[68px] z-10">
+            <div className="w-[116px] h-[116px] sm:w-[136px] sm:h-[136px] rounded-full overflow-hidden border-[4px] sm:border-[5px] border-[#F8F6F0] shadow-2xl bg-[#23271F]">
               <Image
-                src="/images/hero-portrait.png"
+                src="/images/portrait%202.jpeg?v=2"
                 alt="Oksana - Nail Technician"
-                className="w-full h-full object-cover object-top scale-125 -translate-x-2.5"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
 
           {/* Name & Title (Much Bigger & Impactful) */}
-          <div className="text-center px-6 mt-1.5 sm:mt-2.5">
-            <h1 className="font-signature text-[58px] sm:text-[66px] font-normal leading-none text-[#23271F] select-none tracking-normal">
+          <div className="text-center px-6 mt-1 sm:mt-2">
+            <h1 className="font-signature text-[52px] sm:text-[62px] font-normal leading-none text-[#23271F] select-none tracking-normal">
               Oksana
             </h1>
-            <p className="mt-0.5 text-[11.5px] sm:text-[12.5px] font-semibold tracking-[0.3em] text-[#59634C] uppercase">
+            <p className="mt-0.5 text-[11px] sm:text-[12px] font-semibold tracking-[0.28em] text-[#59634C] uppercase">
               NAIL ARTIST
             </p>
-            <div className="w-10 sm:w-12 h-px bg-[#59634C]/35 mx-auto mt-2" />
+            <div className="w-10 sm:w-12 h-px bg-[#59634C]/35 mx-auto mt-1.5" />
           </div>
         </div>
 
         {/* Framed Buttons Stack (Middle - Generous & Luxurious Padding) */}
-        <div className="w-full px-6 sm:px-7 space-y-3 sm:space-y-3.5 my-auto flex-shrink-0">
+        <div className="w-full px-6 sm:px-7 space-y-2.5 sm:space-y-3 my-auto flex-shrink-0 pt-1 pb-1">
           <button
             onClick={() => setActiveModal('about')}
-            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             About Me
           </button>
@@ -86,21 +77,21 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-2 w-full">
             <button
               onClick={() => setActiveModal('clean-beauty')}
-              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Clean Beauty
             </button>
 
             <button
               onClick={() => setActiveModal('bridal')}
-              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Bridal
             </button>
 
             <button
               onClick={() => setActiveModal('editorial')}
-              className="w-full py-4 sm:py-4.5 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
+              className="w-full py-3.5 sm:py-4 px-1 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.08em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99] text-center"
             >
               Editorial
             </button>
@@ -108,24 +99,29 @@ export default function Home() {
 
           <button
             onClick={() => setActiveModal('reviews')}
-            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             The Experience
           </button>
 
           <button
             onClick={() => setActiveModal('book')}
-            className="w-full py-4 sm:py-4.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
+            className="w-full py-3.5 sm:py-4 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-all duration-300 shadow-sm active:scale-[0.99]"
           >
             Enquiries
           </button>
         </div>
 
         {/* Footer Info (Bottom) */}
-        <div className="w-full px-6 sm:px-7 pb-3 sm:pb-6 pt-1 text-center flex-shrink-0">
+        <div className="w-full px-6 sm:px-7 pb-4 sm:pb-6 pt-1 text-center flex-shrink-0 flex flex-col items-center gap-2">
           <div className="text-[8px] sm:text-[8.5px] uppercase tracking-[0.24em] text-[#868B7D]">
-            <span>Bristol, UK · © 2026 Oksana</span>
+            <span>See you around</span>
           </div>
+          <Image
+            src="/images/logo-dark.png"
+            alt="OXINAILS"
+            className="h-4.5 sm:h-5.5 w-auto max-w-[120px] sm:max-w-[140px] object-contain opacity-75 hover:opacity-100 transition-opacity"
+          />
         </div>
 
         {/* ========================================== */}
@@ -151,7 +147,7 @@ export default function Home() {
               {/* Bio Text */}
               <div className="space-y-4 text-[13px] text-[#44483E] leading-relaxed font-light">
                 <p>
-                  With years of experience in the beauty industry, I specialize in clean beauty, natural nail aesthetics, and editorial work.
+                  A freelance nail artist working independently across manicure, pedicure and creative projects.
                 </p>
                 <p>
                   My work moves between private clients, bridal and creative productions, with a particular appreciation for natural beauty, thoughtful details and a considered approach to each project.
@@ -159,46 +155,6 @@ export default function Home() {
                 <p>
                   Based in Bristol, working on set with models.
                 </p>
-              </div>
-
-              {/* What Drives My Passion (Values) */}
-              <div className="mt-9 pt-7 border-t border-[#E2DED4]">
-                <p className="text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#80796F] mb-9">What drives my passion</p>
-                
-                <div className="space-y-10">
-                  {/* Value 01 */}
-                  <article className="relative">
-                    <span className="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">01</span>
-                    <div className="relative border-l border-[#8D867A]/60 pl-5">
-                      <h3 className="font-serif text-lg text-[#23271F]">Quality &amp; Precision</h3>
-                      <p className="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
-                        I believe in doing nails right. Using the best products and techniques ensures that your nails not only look stunning but stay strong and beautiful for as long as possible. Quality is key, and I always aim for perfection.
-                      </p>
-                    </div>
-                  </article>
-
-                  {/* Value 02 */}
-                  <article className="relative">
-                    <span className="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">02</span>
-                    <div className="relative border-l border-[#8D867A]/60 pl-5">
-                      <h3 className="font-serif text-lg text-[#23271F]">Client Experience</h3>
-                      <p className="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
-                        My top priority is you. From your comfort in the chair to ensuring you love your nails. I'm here to make every visit an experience. I strive to create a welcoming, positive space where you can relax and feel your best.
-                      </p>
-                    </div>
-                  </article>
-
-                  {/* Value 03 */}
-                  <article className="relative">
-                    <span className="absolute -left-1 -top-8 font-serif text-[78px] leading-none text-[#8D867A]/15 select-none pointer-events-none">03</span>
-                    <div className="relative border-l border-[#8D867A]/60 pl-5">
-                      <h3 className="font-serif text-lg text-[#23271F]">Creativity &amp; Innovation</h3>
-                      <p className="mt-2 text-[13px] font-light leading-relaxed text-[#575B50]">
-                        I'm all about pushing boundaries and experimenting with new designs. Every set of nails is a canvas, and I love bringing fresh, unique ideas to life, whether it's bold art, intricate details or classic elegance.
-                      </p>
-                    </div>
-                  </article>
-                </div>
               </div>
             </div>
           </div>
@@ -217,94 +173,99 @@ export default function Home() {
               {/* Category 1: Clean Beauty (Soft Alabaster #F8F6F0) */}
               <div className="bg-[#F8F6F0] px-5 sm:px-6 pt-6 sm:pt-7 pb-8">
                 <div className="mb-3.5 pb-1 border-b border-[#E2DED4]">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#23271F]">Clean Beauty <span className="font-sans font-light text-lg text-[#59634C]">&amp;</span> BIAB</h3>
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#23271F]">Clean Beauty</h3>
                   <p className="text-xs text-[#575B50] font-light mt-0.5 tracking-wide">Natural nails. Thoughtful care. Aesthetic.</p>
                 </div>
 
                 <div className="space-y-2.5">
                   {/* Hero Spotlight 1 */}
                   <div 
-                    onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/9.jpeg', caption: 'Clean Beauty & BIAB — Spotlight' })}
+                    onClick={() => setLightbox({ src: '/images/clean-beauty images/1.jpeg?v=2', caption: 'Clean Beauty 1' })}
                     className="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/CLEAN BEAUTY/9.jpeg" alt="Clean Beauty 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image 
+                      src="/images/clean-beauty images/1.jpeg?v=2" 
+                      alt="Clean Beauty 1" 
+                      className="w-full h-full object-cover" 
+                      style={{ transform: 'rotate(-10deg) scale(1.4)', transformOrigin: 'center' }} 
+                    />
                   </div>
 
                   {/* 2-Column Vertical Pair */}
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/2.jpeg', caption: 'Clean Beauty 2' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/2.jpeg', caption: 'Clean Beauty 2' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/2.jpeg" alt="Clean Beauty 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/2.jpeg" alt="Clean Beauty 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/3.jpeg', caption: 'Clean Beauty 3' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/3.jpeg', caption: 'Clean Beauty 3' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/3.jpeg" alt="Clean Beauty 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/3.jpeg" alt="Clean Beauty 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   {/* 3-Column Detail Trio */}
                   <div className="grid grid-cols-3 gap-2">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/4.jpeg', caption: 'Clean Beauty 4' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/4.jpeg', caption: 'Clean Beauty 4' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/4.jpeg" alt="Clean Beauty 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/4.jpeg" alt="Clean Beauty 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/5.jpeg', caption: 'Clean Beauty 5' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/5.jpeg', caption: 'Clean Beauty 5' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/5.jpeg" alt="Clean Beauty 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/5.jpeg" alt="Clean Beauty 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/6.jpeg', caption: 'Clean Beauty 6' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/6.jpeg', caption: 'Clean Beauty 6' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/6.jpeg" alt="Clean Beauty 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/6.jpeg" alt="Clean Beauty 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   {/* 2-Column Pair */}
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/7.jpeg', caption: 'Clean Beauty 7' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/7.jpeg', caption: 'Clean Beauty 7' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/7.jpeg" alt="Clean Beauty 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/7.jpeg" alt="Clean Beauty 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/8.jpeg', caption: 'Clean Beauty 8' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/8.jpeg', caption: 'Clean Beauty 8' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/8.jpeg" alt="Clean Beauty 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/8.jpeg" alt="Clean Beauty 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   {/* Wide Feature Card */}
                   <div 
-                    onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/1.jpeg', caption: 'Clean Beauty 9 — Natural Care Detail' })}
+                    onClick={() => setLightbox({ src: '/images/clean-beauty images/9.jpeg', caption: 'Clean Beauty 9' })}
                     className="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/CLEAN BEAUTY/1.jpeg" alt="Clean Beauty 9" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image src="/images/clean-beauty images/9.jpeg" alt="Clean Beauty 9" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
 
                   {/* 2-Column Pair */}
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/10.jpeg', caption: 'Clean Beauty 10' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/10.jpeg', caption: 'Clean Beauty 10' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/10.jpeg" alt="Clean Beauty 10" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/10.jpeg" alt="Clean Beauty 10" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/CLEAN BEAUTY/11.jpeg', caption: 'Clean Beauty 11' })}
+                      onClick={() => setLightbox({ src: '/images/clean-beauty images/11.jpeg', caption: 'Clean Beauty 11' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#E2DED4] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/CLEAN BEAUTY/11.jpeg" alt="Clean Beauty 11" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/clean-beauty images/11.jpeg" alt="Clean Beauty 11" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
                 </div>
@@ -334,59 +295,59 @@ export default function Home() {
                 <div className="space-y-2.5">
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/1.jpeg', caption: 'Bridal 1' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/1.jpeg', caption: 'Bridal 1' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/1.jpeg" alt="Bridal 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/1.jpeg" alt="Bridal 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/2.jpeg', caption: 'Bridal 2' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/2.jpeg', caption: 'Bridal 2' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/2.jpeg" alt="Bridal 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/2.jpeg" alt="Bridal 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div 
-                    onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/3.jpeg', caption: 'Bridal 3 — Wedding Day Aesthetics' })}
+                    onClick={() => setLightbox({ src: '/images/bridal images/3.jpeg', caption: 'Bridal 3 — Wedding Day Aesthetics' })}
                     className="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/BRIDAL & OCCASION/3.jpeg" alt="Bridal 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image src="/images/bridal images/3.jpeg" alt="Bridal 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
 
                   <div className="grid grid-cols-3 gap-2">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/4.jpeg', caption: 'Bridal 4' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/4.jpeg', caption: 'Bridal 4' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/4.jpeg" alt="Bridal 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/4.jpeg" alt="Bridal 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/5.jpeg', caption: 'Bridal 5' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/5.jpeg', caption: 'Bridal 5' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/5.jpeg" alt="Bridal 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/5.jpeg" alt="Bridal 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/6.jpeg', caption: 'Bridal 6' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/6.jpeg', caption: 'Bridal 6' })}
                       className="aspect-square bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/6.jpeg" alt="Bridal 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/6.jpeg" alt="Bridal 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/7.jpeg', caption: 'Bridal 7' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/7.jpeg', caption: 'Bridal 7' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/7.jpeg" alt="Bridal 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/7.jpeg" alt="Bridal 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/BRIDAL & OCCASION/8.jpeg', caption: 'Bridal 8' })}
+                      onClick={() => setLightbox({ src: '/images/bridal images/8.jpeg', caption: 'Bridal 8' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/BRIDAL & OCCASION/8.jpeg" alt="Bridal 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/bridal images/8.jpeg" alt="Bridal 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
                 </div>
@@ -415,39 +376,39 @@ export default function Home() {
 
                 <div className="space-y-2.5">
                   <div 
-                    onClick={() => setLightbox({ src: '/images/ON SET/1.jpeg', caption: 'On Set 1 — Creative Production Cover' })}
-                    className="w-full aspect-[16/10] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
+                    onClick={() => setLightbox({ src: '/images/edutorial images/1.jpeg?v=3', caption: 'On Set 1 — Creative Production Cover' })}
+                    className="w-full aspect-[4/3] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/ON SET/1.jpeg" alt="On Set 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image src="/images/edutorial images/1.jpeg?v=3" alt="On Set 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
 
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/ON SET/2.jpeg', caption: 'On Set 2' })}
+                      onClick={() => setLightbox({ src: '/images/edutorial images/2.jpeg', caption: 'On Set 2' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/ON SET/2.jpeg" alt="On Set 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/edutorial images/2.jpeg" alt="On Set 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/ON SET/3.jpeg', caption: 'On Set 3' })}
+                      onClick={() => setLightbox({ src: '/images/edutorial images/3.jpeg', caption: 'On Set 3' })}
                       className="aspect-[3/4] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/ON SET/3.jpeg" alt="On Set 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/edutorial images/3.jpeg" alt="On Set 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/ON SET/4.jpeg', caption: 'On Set 4' })}
+                      onClick={() => setLightbox({ src: '/images/edutorial images/4.jpeg', caption: 'On Set 4' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/ON SET/4.jpeg" alt="On Set 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/edutorial images/4.jpeg" alt="On Set 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/ON SET/5.jpeg', caption: 'On Set 5' })}
+                      onClick={() => setLightbox({ src: '/images/edutorial images/5.jpeg', caption: 'On Set 5' })}
                       className="aspect-[4/5] bg-stone-200 overflow-hidden shadow-sm border border-[#D5C8B8] cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/ON SET/5.jpeg" alt="On Set 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/edutorial images/5.jpeg" alt="On Set 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
                 </div>
@@ -458,67 +419,67 @@ export default function Home() {
                 <div className="space-y-2.5">
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/1.jpeg', caption: 'BTS 1' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/1.jpeg', caption: 'BTS 1' })}
                       className="aspect-[4/5] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/1.jpeg" alt="BTS 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/1.jpeg" alt="BTS 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/2.jpeg', caption: 'BTS 2' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/2.jpeg', caption: 'BTS 2' })}
                       className="aspect-[4/5] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/2.jpeg" alt="BTS 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/2.jpeg" alt="BTS 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div 
-                    onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/3.jpeg', caption: 'BTS 3 — Studio Atmosphere' })}
+                    onClick={() => setLightbox({ src: '/images/behind the scenes images/3.jpeg', caption: 'BTS 3 — Studio Atmosphere' })}
                     className="w-full aspect-[16/10] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/behind the schenes ON SET/3.jpeg" alt="BTS 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image src="/images/behind the scenes images/3.jpeg" alt="BTS 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
 
                   <div className="grid grid-cols-3 gap-2">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/4.jpeg', caption: 'BTS 4' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/4.jpeg', caption: 'BTS 4' })}
                       className="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/4.jpeg" alt="BTS 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/4.jpeg" alt="BTS 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/5.jpeg', caption: 'BTS 5' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/5.jpeg', caption: 'BTS 5' })}
                       className="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/5.jpeg" alt="BTS 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/5.jpeg" alt="BTS 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/6.jpeg', caption: 'BTS 6' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/6.jpeg', caption: 'BTS 6' })}
                       className="aspect-square bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/6.jpeg" alt="BTS 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/6.jpeg" alt="BTS 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2.5">
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/7.jpeg', caption: 'BTS 7' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/7.jpeg', caption: 'BTS 7' })}
                       className="aspect-[3/4] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/7.jpeg" alt="BTS 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/7.jpeg" alt="BTS 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                     <div 
-                      onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/8.jpeg', caption: 'BTS 8' })}
+                      onClick={() => setLightbox({ src: '/images/behind the scenes images/8.jpeg', caption: 'BTS 8' })}
                       className="aspect-[3/4] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                     >
-                      <Image src="/images/behind the schenes ON SET/8.jpeg" alt="BTS 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                      <Image src="/images/behind the scenes images/8.jpeg" alt="BTS 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                     </div>
                   </div>
 
                   <div 
-                    onClick={() => setLightbox({ src: '/images/behind the schenes ON SET/9.jpeg', caption: 'BTS 9 — On Set Details' })}
+                    onClick={() => setLightbox({ src: '/images/behind the scenes images/9.jpeg', caption: 'BTS 9 — On Set Details' })}
                     className="w-full aspect-[16/10] bg-stone-800 overflow-hidden shadow-sm border border-white/10 cursor-pointer group rounded-none"
                   >
-                    <Image src="/images/behind the schenes ON SET/9.jpeg" alt="BTS 9" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
+                    <Image src="/images/behind the scenes images/9.jpeg" alt="BTS 9" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-none" />
                   </div>
                 </div>
               </div>
@@ -542,9 +503,9 @@ export default function Home() {
                 <span className="h-px w-8 bg-[#59634C]/40" />
               </div>
 
-              <h2 className="font-serif text-2xl text-[#23271F]">Get in Touch</h2>
+              <h2 className="font-serif text-2xl text-[#23271F]">Work with Me</h2>
               <p className="text-xs text-[#575B50] mt-2 mb-6 font-light">
-                For appointments, bridal enquiries, and creative projects.
+                For appointments, bridal and creative projects.
               </p>
 
               <div className="space-y-3">
@@ -559,7 +520,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="mailto:oxi.nails6@gmail.com"
+                  href="/contact.html"
                   className="w-full flex items-center justify-center gap-2 py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-colors shadow-sm"
                 >
                   <Mail className="h-4 w-4" />
@@ -568,7 +529,7 @@ export default function Home() {
               </div>
 
               <p className="text-[9px] uppercase tracking-wider text-center text-[#868B7D] mt-5">
-                Bristol, UK · Custom appointments &amp; bridal
+                Open to collaborations
               </p>
             </div>
           </div>
@@ -584,10 +545,7 @@ export default function Home() {
                 <X className="h-5 w-5" />
               </button>
 
-              <h2 className="font-serif text-2xl text-[#23271F]">The Experience</h2>
-              <p className="text-xs text-[#575B50] mt-1 mb-6 font-light">
-                Words from our private clients and bridal parties.
-              </p>
+              <h2 className="font-serif text-2xl text-[#23271F] mb-6">The Experience</h2>
                 {/* Review: Helen (Bridal 5-Star) */}
                 <blockquote className="border-l-2 border-[#8D867A] pl-5">
                   <div className="flex items-center gap-1.5 text-[#8C6239] mb-2">
@@ -631,7 +589,7 @@ export default function Home() {
                     “Thank you so much for our nails 💅 you are truly talented- such an artist! 💗 we love them xx”
                   </p>
                   <footer className="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                    — CLIENT FEEDBACK
+                    — Charly
                   </footer>
                 </blockquote>
 
@@ -661,7 +619,7 @@ export default function Home() {
                     “I love my nails. Thanks”
                   </p>
                   <footer className="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                    — CLIENT FEEDBACK
+                    — Sue
                   </footer>
                 </blockquote>
 
@@ -691,7 +649,7 @@ export default function Home() {
                     “Дякую дуже за ваші золоті руки й талант ❤️”
                   </p>
                   <footer className="mt-2.5 text-[9.5px] font-medium uppercase tracking-[0.24em] text-[#80796F]">
-                    — CLIENT FEEDBACK
+                    — Indianna
                   </footer>
                 </blockquote>
               </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 import SectionLabel from '@/components/editorial/SectionLabel';
-import Values from '@/components/editorial/Values';
 
 export default function About() {
   return (
@@ -18,7 +17,6 @@ export default function About() {
             <p className="mt-5 text-[13px] font-light leading-6 text-[#56584D]">Your Nail Technician, Influencer, and Artist. I'm passionate about transforming nails into mini works of art. I'm here to inspire, share tips, and connect with all of you who love the world of beauty and design.</p>
           </div>
         </div>
-        <Values />
       </div>
     </section>
   );
