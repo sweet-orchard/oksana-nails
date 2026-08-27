@@ -117,11 +117,6 @@ export default function Home() {
           <div className="text-[8px] sm:text-[8.5px] uppercase tracking-[0.24em] text-[#868B7D]">
             <span>See you around</span>
           </div>
-          <Image
-            src="/images/logo-dark.png"
-            alt="OXINAILS"
-            className="h-4.5 sm:h-5.5 w-auto max-w-[120px] sm:max-w-[140px] object-contain opacity-75 hover:opacity-100 transition-opacity"
-          />
         </div>
 
         {/* ========================================== */}
