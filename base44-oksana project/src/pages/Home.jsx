@@ -519,7 +519,7 @@ export default function Home() {
                   className="w-full flex items-center justify-center gap-2 py-3.5 px-6 border border-[#2D3227] bg-[#F8F6F0]/75 text-[#23271F] font-sans text-xs font-semibold uppercase tracking-[0.24em] hover:bg-[#23271F] hover:text-[#F8F6F0] transition-colors shadow-sm"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>Email: oxi.nails6@gmail.com</span>
+                  <span>Email: virasaienko@gmail.com</span>
                 </a>
               </div>
 
